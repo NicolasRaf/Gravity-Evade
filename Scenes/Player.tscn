@@ -5,12 +5,26 @@
 [sub_resource type="GDScript" id=11]
 script/source = "extends KinematicBody2D
 
-var speed = 7 #Velocidade do jogador
+var gravity = 500
+var direction : Vector2 = Vector2()	
+#Vetor bidimensional,que inicialmente está em posição (0,0)
+
+var jumpForce = 500
 
 func _physics_process(delta):
-	var velocity = Vector3(speed,0,0) # O movimento só é realizado no eixo horizontal para direita,nada em Y ou Z.
-	move_and_slide(velocity)
+	direction.x = 234
+	
+	if Input.is_action_pressed(\"jump\") and is_on_floor():
+		direction.y -= jumpForce
+	else:
+		direction.y += gravity * delta
+		
+	direction = move_and_slide(direction, Vector2.UP) 
+	#Garante que o personagem não atravesse paredes e ande horizontalmente
+	
 
+	
+	
 "
 
 [sub_resource type="AtlasTexture" id=1]
@@ -71,8 +85,14 @@ script = SubResource( 11 )
 position = Vector2( 2, -45 )
 scale = Vector2( 0.773438, 0.710938 )
 frames = SubResource( 9 )
-frame = 2
+playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, -27 )
 shape = SubResource( 10 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+zoom = Vector2( 0.5, 0.5 )
+smoothing_enabled = true
+smoothing_speed = 8.0
