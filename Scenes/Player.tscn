@@ -81,20 +81,20 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=10]
-extents = Vector2( 15, 26 )
+extents = Vector2( 13.5, 18 )
 
 [node name="Player" type="KinematicBody2D"]
 script = SubResource( 11 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 2, -45 )
-scale = Vector2( 0.773438, 0.710938 )
+position = Vector2( -13.75, -31.25 )
+scale = Vector2( 0.527344, 0.496094 )
 frames = SubResource( 9 )
-frame = 7
+frame = 5
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, -27 )
+position = Vector2( -15.5, -19 )
 shape = SubResource( 10 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
