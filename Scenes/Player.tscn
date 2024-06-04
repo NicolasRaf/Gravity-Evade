@@ -1,18 +1,23 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Assets/Run.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/VSlider.gd" type="Script" id=2]
 
 [sub_resource type="GDScript" id=11]
 script/source = "extends KinematicBody2D
+onready var v_slider: VSlider = get_node(\"CanvasLayer/VSlider\")
 
-var gravity = 500
+
+
 var direction : Vector2 = Vector2()	
 #Vetor bidimensional,que inicialmente está em posição (0,0)
 
 var jumpForce = 500
 
 func _physics_process(delta):
+	var gravity = v_slider.value	
 	direction.x = 234
+	print(\"Gravity: \", gravity)
 	
 	if Input.is_action_pressed(\"jump\") and is_on_floor():
 		direction.y -= jumpForce
@@ -85,6 +90,7 @@ script = SubResource( 11 )
 position = Vector2( 2, -45 )
 scale = Vector2( 0.773438, 0.710938 )
 frames = SubResource( 9 )
+frame = 7
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -96,3 +102,20 @@ current = true
 zoom = Vector2( 0.5, 0.5 )
 smoothing_enabled = true
 smoothing_speed = 8.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="VSlider" type="VSlider" parent="CanvasLayer"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -65.0
+margin_top = -41.0
+margin_right = -49.0
+margin_bottom = 52.0
+rect_scale = Vector2( 2, 2 )
+min_value = -1000.0
+max_value = 1000.0
+tick_count = 2
+script = ExtResource( 2 )
