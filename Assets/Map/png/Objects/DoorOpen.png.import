@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/DoorOpen.png-0aa53607fcc74c54de75a142039c646f.stex"
+path="res://.import/DoorOpen.png-f3de912ac0109f33ff2e0543d9f3b33c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Map/png/Objects/DoorOpen.png"
-dest_files=[ "res://.import/DoorOpen.png-0aa53607fcc74c54de75a142039c646f.stex" ]
+source_file="res://assets/Map/png/Objects/DoorOpen.png"
+dest_files=[ "res://.import/DoorOpen.png-f3de912ac0109f33ff2e0543d9f3b33c.stex" ]
 
 [params]
 

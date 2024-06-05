@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Scripts/Fragment.gd" type="Script" id=1]
-[ext_resource path="res://Assets/Songs/Sound of game coins - RiximaX Sound Effects HD (256).mp3" type="AudioStream" id=2]
+[ext_resource path="res://scripts/Fragment.gd" type="Script" id=1]
+[ext_resource path="res://assets/Songs/Sound of game coins - RiximaX Sound Effects HD (256).mp3" type="AudioStream" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 
