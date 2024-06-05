@@ -1,11 +1,10 @@
-[gd_scene load_steps=37 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/Fragment.tscn" type="PackedScene" id=2]
-[ext_resource path="res://assets/Map/Foozle_2DT0001_Science_Fiction_Labs_Tileset/Traps/saw_activate.png" type="Texture" id=3]
+[ext_resource path="res://scenes/KillZone.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/Map/Foozle_2DT0001_Science_Fiction_Labs_Tileset/Tileset/level_tileset.png" type="Texture" id=4]
-[ext_resource path="res://assets/Map/Foozle_2DT0001_Science_Fiction_Labs_Tileset/Traps/laser_spikes_idle.png" type="Texture" id=5]
-[ext_resource path="res://assets/Map/Foozle_2DT0001_Science_Fiction_Labs_Tileset/Traps/laser_idle.png" type="Texture" id=6]
+[ext_resource path="res://scenes/RotarySaw.tscn" type="PackedScene" id=5]
 [ext_resource path="res://assets/Map/background1-3.png" type="Texture" id=7]
 [ext_resource path="res://scenes/Laser.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scenes/laserBar.tscn" type="PackedScene" id=9]
@@ -55,35 +54,14 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 16, 0, 16 )
 [sub_resource type="ConvexPolygonShape2D" id=13]
 points = PoolVector2Array( 0, 1, 32, 1, 32, 16, 0, 16 )
 
-[sub_resource type="ConvexPolygonShape2D" id=14]
-points = PoolVector2Array( 11, 0, 30, 0, 30, 29, 11, 29 )
-
-[sub_resource type="ConvexPolygonShape2D" id=15]
-points = PoolVector2Array( 0, 17, 32, 17, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=16]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
 [sub_resource type="ConvexPolygonShape2D" id=22]
 points = PoolVector2Array( 10, 0, 42, 0, 42, 50, 10, 50 )
 
 [sub_resource type="ConvexPolygonShape2D" id=23]
 points = PoolVector2Array( 10, 0, 42, 0, 42, 50, 10, 50 )
 
-[sub_resource type="ConvexPolygonShape2D" id=17]
-points = PoolVector2Array( 17, 0, 32, 0, 32, 29, 17, 29 )
-
-[sub_resource type="ConvexPolygonShape2D" id=18]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 29, 0, 29 )
-
 [sub_resource type="ConvexPolygonShape2D" id=19]
 points = PoolVector2Array( 0, 19, 32, 19, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=20]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=21]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [sub_resource type="ConvexPolygonShape2D" id=28]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 17, 0, 17 )
@@ -412,54 +390,6 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 17, 0, 17 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 32/z_index = 0
-33/name = "saw_activate.png 33"
-33/texture = ExtResource( 3 )
-33/tex_offset = Vector2( 0, 0 )
-33/modulate = Color( 1, 1, 1, 1 )
-33/region = Rect2( 160, 0, 32, 32 )
-33/tile_mode = 0
-33/occluder_offset = Vector2( 0, 0 )
-33/navigation_offset = Vector2( 0, 0 )
-33/shape_offset = Vector2( 0, 0 )
-33/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-33/shape = SubResource( 14 )
-33/shape_one_way = false
-33/shape_one_way_margin = 1.0
-33/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 14 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
-33/z_index = 0
-34/name = "laser_spikes_idle.png 34"
-34/texture = ExtResource( 5 )
-34/tex_offset = Vector2( 0, 0 )
-34/modulate = Color( 1, 1, 1, 1 )
-34/region = Rect2( 96, 0, 32, 32 )
-34/tile_mode = 0
-34/occluder_offset = Vector2( 0, 0 )
-34/navigation_offset = Vector2( 0, 0 )
-34/shape_offset = Vector2( 0, 0 )
-34/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-34/shape = SubResource( 15 )
-34/shape_one_way = false
-34/shape_one_way_margin = 1.0
-34/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 15 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-}, {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 16 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
-34/z_index = 0
 35/name = "level_tileset.png 35"
 35/texture = ExtResource( 4 )
 35/tex_offset = Vector2( 0, 0 )
@@ -487,33 +417,6 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 17, 0, 17 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 35/z_index = 0
-36/name = "saw_activate.png 36"
-36/texture = ExtResource( 3 )
-36/tex_offset = Vector2( 0, 0 )
-36/modulate = Color( 1, 1, 1, 1 )
-36/region = Rect2( 192, 0, 32, 32 )
-36/tile_mode = 0
-36/occluder_offset = Vector2( 0, 0 )
-36/navigation_offset = Vector2( 0, 0 )
-36/shape_offset = Vector2( 0, 0 )
-36/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-36/shape = SubResource( 17 )
-36/shape_one_way = false
-36/shape_one_way_margin = 1.0
-36/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 17 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-}, {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 18 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
-36/z_index = 0
 37/name = "level_tileset.png 37"
 37/texture = ExtResource( 4 )
 37/tex_offset = Vector2( 0, 0 )
@@ -535,33 +438,6 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 17, 0, 17 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 37/z_index = 0
-38/name = "laser_idle.png 38"
-38/texture = ExtResource( 6 )
-38/tex_offset = Vector2( 0, 0 )
-38/modulate = Color( 1, 1, 1, 1 )
-38/region = Rect2( 128, 0, 32, 32 )
-38/tile_mode = 0
-38/occluder_offset = Vector2( 0, 0 )
-38/navigation_offset = Vector2( 0, 0 )
-38/shape_offset = Vector2( 0, 0 )
-38/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-38/shape = SubResource( 20 )
-38/shape_one_way = false
-38/shape_one_way_margin = 1.0
-38/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 20 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-}, {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 21 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
-38/z_index = 0
 39/name = "level_tileset.png 39"
 39/texture = ExtResource( 4 )
 39/tex_offset = Vector2( 0, 0 )
@@ -598,6 +474,12 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 17, 0, 17 )
 } ]
 40/z_index = 0
 
+[sub_resource type="RectangleShape2D" id=29]
+extents = Vector2( 116, 11.5 )
+
+[sub_resource type="RectangleShape2D" id=30]
+extents = Vector2( 11, 43.5 )
+
 [node name="Game" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -612,49 +494,202 @@ scale = Vector2( 2.02637, 0.598633 )
 z_index = -2
 texture = ExtResource( 7 )
 
-[node name="Laser" parent="TileMap" instance=ExtResource( 8 )]
+[node name="Laser" type="Node" parent="TileMap"]
+
+[node name="Laser" parent="TileMap/Laser" instance=ExtResource( 8 )]
 position = Vector2( 383, -16 )
 
-[node name="Laser2" parent="TileMap" instance=ExtResource( 8 )]
+[node name="Laser2" parent="TileMap/Laser" instance=ExtResource( 8 )]
 position = Vector2( 417, -16 )
 
-[node name="Laser3" parent="TileMap" instance=ExtResource( 8 )]
+[node name="Laser3" parent="TileMap/Laser" instance=ExtResource( 8 )]
 position = Vector2( 928, -191 )
 rotation = -3.14974
 
-[node name="Laser4" parent="TileMap" instance=ExtResource( 8 )]
+[node name="Laser4" parent="TileMap/Laser" instance=ExtResource( 8 )]
 position = Vector2( 608, -16 )
 
-[node name="Laser5" parent="TileMap" instance=ExtResource( 8 )]
+[node name="Laser5" parent="TileMap/Laser" instance=ExtResource( 8 )]
 position = Vector2( 656, -16 )
 
-[node name="Laser6" parent="TileMap" instance=ExtResource( 8 )]
+[node name="Laser6" parent="TileMap/Laser" instance=ExtResource( 8 )]
 position = Vector2( 928, -190 )
 rotation = 3.13769
 
-[node name="Laser7" parent="TileMap" instance=ExtResource( 8 )]
+[node name="Laser7" parent="TileMap/Laser" instance=ExtResource( 8 )]
 position = Vector2( 1919, -15 )
 rotation = -1.57201
 
-[node name="Laser8" parent="TileMap" instance=ExtResource( 8 )]
+[node name="Laser8" parent="TileMap/Laser" instance=ExtResource( 8 )]
 position = Vector2( 1919, -45 )
 rotation = -1.57201
 
-[node name="Laser9" parent="TileMap" instance=ExtResource( 8 )]
+[node name="Laser9" parent="TileMap/Laser" instance=ExtResource( 8 )]
 position = Vector2( 1918, -77 )
 rotation = -1.57201
 
-[node name="Laser10" parent="TileMap" instance=ExtResource( 8 )]
+[node name="Laser10" parent="TileMap/Laser" instance=ExtResource( 8 )]
 position = Vector2( 1918, -97 )
 rotation = -1.55614
 
-[node name="Laser11" parent="TileMap" instance=ExtResource( 8 )]
+[node name="Laser11" parent="TileMap/Laser" instance=ExtResource( 8 )]
 position = Vector2( 2174, -80 )
 rotation = -1.55614
 
-[node name="Laser12" parent="TileMap" instance=ExtResource( 8 )]
+[node name="Laser12" parent="TileMap/Laser" instance=ExtResource( 8 )]
 position = Vector2( 2176, -16 )
 rotation = -1.55614
+
+[node name="LaserBar" type="Node" parent="TileMap"]
+
+[node name="laserBar" parent="TileMap/LaserBar" instance=ExtResource( 9 )]
+position = Vector2( 2321, -191 )
+
+[node name="laserBar2" parent="TileMap/LaserBar" instance=ExtResource( 9 )]
+position = Vector2( 2322, -159 )
+
+[node name="laserBar3" parent="TileMap/LaserBar" instance=ExtResource( 9 )]
+position = Vector2( 2322, -127 )
+
+[node name="Saw" type="Node" parent="TileMap"]
+
+[node name="RotarySaw" parent="TileMap/Saw" instance=ExtResource( 5 )]
+position = Vector2( 528, -15 )
+
+[node name="RotarySaw2" parent="TileMap/Saw" instance=ExtResource( 5 )]
+position = Vector2( 559, -15 )
+
+[node name="RotarySaw3" parent="TileMap/Saw" instance=ExtResource( 5 )]
+position = Vector2( 801, -80 )
+rotation = -1.56864
+
+[node name="RotarySaw4" parent="TileMap/Saw" instance=ExtResource( 5 )]
+position = Vector2( 800, -113 )
+rotation = -1.56864
+
+[node name="RotarySaw5" parent="TileMap/Saw" instance=ExtResource( 5 )]
+position = Vector2( 800, -146 )
+rotation = -1.56864
+
+[node name="RotarySaw6" parent="TileMap/Saw" instance=ExtResource( 5 )]
+position = Vector2( 1022, -193 )
+rotation = -3.1208
+
+[node name="RotarySaw7" parent="TileMap/Saw" instance=ExtResource( 5 )]
+position = Vector2( 1134, -194 )
+rotation = -3.1208
+scale = Vector2( 1, 1 )
+
+[node name="RotarySaw8" parent="TileMap/Saw" instance=ExtResource( 5 )]
+position = Vector2( 1169, -193 )
+rotation = -3.1208
+scale = Vector2( 1, 1 )
+
+[node name="RotarySaw9" parent="TileMap/Saw" instance=ExtResource( 5 )]
+position = Vector2( 1190, -170 )
+rotation = -3.1208
+scale = Vector2( 1, 1 )
+
+[node name="RotarySaw10" parent="TileMap/Saw" instance=ExtResource( 5 )]
+position = Vector2( 1518, -161 )
+rotation = -3.1208
+scale = Vector2( 1, 1 )
+
+[node name="RotarySaw11" parent="TileMap/Saw" instance=ExtResource( 5 )]
+position = Vector2( 1553, -160 )
+rotation = -3.1208
+scale = Vector2( 1, 1 )
+
+[node name="RotarySaw12" parent="TileMap/Saw" instance=ExtResource( 5 )]
+position = Vector2( 1583, -161 )
+rotation = -3.1208
+scale = Vector2( 1, 1 )
+
+[node name="RotarySaw13" parent="TileMap/Saw" instance=ExtResource( 5 )]
+position = Vector2( 1728, -146 )
+rotation = -3.1208
+scale = Vector2( 1, 1 )
+
+[node name="RotarySaw14" parent="TileMap/Saw" instance=ExtResource( 5 )]
+position = Vector2( 2048, -191 )
+rotation = -1.57521
+scale = Vector2( 1, 1 )
+
+[node name="RotarySaw15" parent="TileMap/Saw" instance=ExtResource( 5 )]
+position = Vector2( 2050, -158 )
+rotation = -1.57521
+scale = Vector2( 1, 1 )
+
+[node name="RotarySaw16" parent="TileMap/Saw" instance=ExtResource( 5 )]
+position = Vector2( 2049, -125 )
+rotation = -1.57521
+scale = Vector2( 1, 1 )
+
+[node name="RotarySaw17" parent="TileMap/Saw" instance=ExtResource( 5 )]
+position = Vector2( 2176, -49 )
+rotation = -1.57521
+scale = Vector2( 1, 1 )
+
+[node name="RotarySaw18" parent="TileMap/Saw" instance=ExtResource( 5 )]
+position = Vector2( 1200, -193 )
+rotation = -3.14012
+
+[node name="RotarySaw19" parent="TileMap/Saw" instance=ExtResource( 5 )]
+position = Vector2( 993, 4 )
+
+[node name="RotarySaw20" parent="TileMap/Saw" instance=ExtResource( 5 )]
+position = Vector2( 1026, 5 )
+
+[node name="RotarySaw21" parent="TileMap/Saw" instance=ExtResource( 5 )]
+position = Vector2( 1058, 5 )
+
+[node name="RotarySaw22" parent="TileMap/Saw" instance=ExtResource( 5 )]
+position = Vector2( 1091, 4 )
+
+[node name="RotarySaw23" parent="TileMap/Saw" instance=ExtResource( 5 )]
+position = Vector2( 1123, 4 )
+
+[node name="RotarySaw24" parent="TileMap/Saw" instance=ExtResource( 5 )]
+position = Vector2( 1156, 4 )
+
+[node name="RotarySaw25" parent="TileMap/Saw" instance=ExtResource( 5 )]
+position = Vector2( 1187, 4 )
+
+[node name="RotarySaw26" parent="TileMap/Saw" instance=ExtResource( 5 )]
+position = Vector2( 1220, 4 )
+
+[node name="RotarySaw27" parent="TileMap/Saw" instance=ExtResource( 5 )]
+position = Vector2( 1252, 5 )
+
+[node name="RotarySaw28" parent="TileMap/Saw" instance=ExtResource( 5 )]
+position = Vector2( 1283, 5 )
+
+[node name="RotarySaw29" parent="TileMap/Saw" instance=ExtResource( 5 )]
+position = Vector2( 1315, 5 )
+
+[node name="RotarySaw30" parent="TileMap/Saw" instance=ExtResource( 5 )]
+position = Vector2( 1347, 4 )
+
+[node name="RotarySaw31" parent="TileMap/Saw" instance=ExtResource( 5 )]
+position = Vector2( 1378, 5 )
+
+[node name="RotarySaw32" parent="TileMap/Saw" instance=ExtResource( 5 )]
+position = Vector2( 1411, 5 )
+
+[node name="RotarySaw33" parent="TileMap/Saw" instance=ExtResource( 5 )]
+position = Vector2( 1443, 4 )
+
+[node name="RotarySaw34" parent="TileMap/Saw" instance=ExtResource( 5 )]
+position = Vector2( 1475, 3 )
+
+[node name="RotarySaw35" parent="TileMap/Saw" instance=ExtResource( 5 )]
+position = Vector2( 1508, 4 )
+
+[node name="RotarySaw36" parent="TileMap/Saw" instance=ExtResource( 5 )]
+position = Vector2( 1539, 3 )
+
+[node name="RotarySaw37" parent="TileMap/Saw" instance=ExtResource( 5 )]
+position = Vector2( 1569, 4 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 19, 1 )
@@ -662,11 +697,18 @@ position = Vector2( 19, 1 )
 [node name="Fragment" parent="." instance=ExtResource( 2 )]
 position = Vector2( 71, -16 )
 
-[node name="laserBar" parent="." instance=ExtResource( 9 )]
-position = Vector2( 2321, -191 )
+[node name="Killlasergamebar" type="Node" parent="."]
 
-[node name="laserBar2" parent="." instance=ExtResource( 9 )]
-position = Vector2( 2322, -159 )
+[node name="KillZone" parent="Killlasergamebar" instance=ExtResource( 3 )]
+position = Vector2( 1294, -189 )
 
-[node name="laserBar3" parent="." instance=ExtResource( 9 )]
-position = Vector2( 2322, -127 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killlasergamebar/KillZone"]
+position = Vector2( 58, -12.5 )
+shape = SubResource( 29 )
+
+[node name="KillZone2" parent="Killlasergamebar" instance=ExtResource( 3 )]
+position = Vector2( 1815, -171 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killlasergamebar/KillZone2"]
+position = Vector2( 4, 27.5 )
+shape = SubResource( 30 )
