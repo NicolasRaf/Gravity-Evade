@@ -23,7 +23,6 @@ stream = ExtResource( 2 )
 max_distance = 9.22337e+18
 
 [node name="TimerQueue" type="Timer" parent="."]
-wait_time = 0.289
 
 [connection signal="body_entered" from="." to="." method="_on_Fragmento_body_entered"]
 [connection signal="finished" from="PickupSound" to="." method="_on_PickupSound_finished"]
