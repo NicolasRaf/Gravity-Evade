@@ -2,8 +2,8 @@ extends KinematicBody2D
 class_name Player
 
 onready var powerTimer: Timer = get_node("PowerTimer")
-onready var button : Button = get_node("CanvasLayer/TimeSlow")
-onready var gravitySlider : VSlider = get_node("CanvasLayer/GravitySlider")
+onready var button : Button = get_node("PlayerHud/TimeSlow")
+onready var gravitySlider : VSlider = get_node("PlayerHud/GravitySlider")
 var direction : Vector2 = Vector2() # Vetor bidimensional,que inicialmente está em posição (0,0)
 var jumpForce : int = 500
 

@@ -1,13 +1,15 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/Fragment.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/KillZone.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/Map/Foozle_2DT0001_Science_Fiction_Labs_Tileset/Tileset/level_tileset.png" type="Texture" id=4]
 [ext_resource path="res://scenes/RotarySaw.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/Portal.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/Map/background1-3.png" type="Texture" id=7]
 [ext_resource path="res://scenes/Laser.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scenes/laserBar.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scripts/World.gd" type="Script" id=10]
 
 [sub_resource type="ConvexPolygonShape2D" id=8]
 points = PoolVector2Array( 0, 3, 16, 3, 16, 16, 0, 16 )
@@ -481,6 +483,7 @@ extents = Vector2( 116, 11.5 )
 extents = Vector2( 11, 43.5 )
 
 [node name="Game" type="Node2D"]
+script = ExtResource( 10 )
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource( 1 )
@@ -578,57 +581,46 @@ rotation = -3.1208
 [node name="RotarySaw7" parent="TileMap/Saw" instance=ExtResource( 5 )]
 position = Vector2( 1134, -194 )
 rotation = -3.1208
-scale = Vector2( 1, 1 )
 
 [node name="RotarySaw8" parent="TileMap/Saw" instance=ExtResource( 5 )]
 position = Vector2( 1169, -193 )
 rotation = -3.1208
-scale = Vector2( 1, 1 )
 
 [node name="RotarySaw9" parent="TileMap/Saw" instance=ExtResource( 5 )]
 position = Vector2( 1190, -170 )
 rotation = -3.1208
-scale = Vector2( 1, 1 )
 
 [node name="RotarySaw10" parent="TileMap/Saw" instance=ExtResource( 5 )]
 position = Vector2( 1518, -161 )
 rotation = -3.1208
-scale = Vector2( 1, 1 )
 
 [node name="RotarySaw11" parent="TileMap/Saw" instance=ExtResource( 5 )]
 position = Vector2( 1553, -160 )
 rotation = -3.1208
-scale = Vector2( 1, 1 )
 
 [node name="RotarySaw12" parent="TileMap/Saw" instance=ExtResource( 5 )]
 position = Vector2( 1583, -161 )
 rotation = -3.1208
-scale = Vector2( 1, 1 )
 
 [node name="RotarySaw13" parent="TileMap/Saw" instance=ExtResource( 5 )]
 position = Vector2( 1728, -146 )
 rotation = -3.1208
-scale = Vector2( 1, 1 )
 
 [node name="RotarySaw14" parent="TileMap/Saw" instance=ExtResource( 5 )]
 position = Vector2( 2048, -191 )
 rotation = -1.57521
-scale = Vector2( 1, 1 )
 
 [node name="RotarySaw15" parent="TileMap/Saw" instance=ExtResource( 5 )]
 position = Vector2( 2050, -158 )
 rotation = -1.57521
-scale = Vector2( 1, 1 )
 
 [node name="RotarySaw16" parent="TileMap/Saw" instance=ExtResource( 5 )]
 position = Vector2( 2049, -125 )
 rotation = -1.57521
-scale = Vector2( 1, 1 )
 
 [node name="RotarySaw17" parent="TileMap/Saw" instance=ExtResource( 5 )]
 position = Vector2( 2176, -49 )
 rotation = -1.57521
-scale = Vector2( 1, 1 )
 
 [node name="RotarySaw18" parent="TileMap/Saw" instance=ExtResource( 5 )]
 position = Vector2( 1200, -193 )
@@ -692,10 +684,14 @@ position = Vector2( 1539, 3 )
 position = Vector2( 1569, 4 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 19, 1 )
+unique_name_in_owner = true
+position = Vector2( 68, -1 )
 
-[node name="Fragment" parent="." instance=ExtResource( 2 )]
-position = Vector2( 71, -16 )
+[node name="Camera2D" type="Camera2D" parent="Player"]
+rotating = true
+current = true
+zoom = Vector2( 0.5, 0.5 )
+limit_smoothed = true
 
 [node name="Killlasergamebar" type="Node" parent="."]
 
@@ -712,3 +708,24 @@ position = Vector2( 1815, -171 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killlasergamebar/KillZone2"]
 position = Vector2( 4, 27.5 )
 shape = SubResource( 30 )
+
+[node name="Portal" parent="." instance=ExtResource( 6 )]
+position = Vector2( 772, -109 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Fragments" type="Node" parent="."]
+
+[node name="Fragment" parent="Fragments" instance=ExtResource( 2 )]
+position = Vector2( 170, -27 )
+
+[node name="Fragment2" parent="Fragments" instance=ExtResource( 2 )]
+position = Vector2( 538, -95 )
+
+[node name="Fragment3" parent="Fragments" instance=ExtResource( 2 )]
+position = Vector2( 270, -42 )
+
+[node name="Fragment4" parent="Fragments" instance=ExtResource( 2 )]
+position = Vector2( 413, -69 )
+
+[node name="Fragment5" parent="Fragments" instance=ExtResource( 2 )]
+position = Vector2( 684, -117 )

@@ -1,8 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://assets/Fonts/GODOFWAR.TTF" type="DynamicFontData" id=1]
+[ext_resource path="res://assets/Fonts/a_space/A-Space Regular Demo.otf" type="DynamicFontData" id=1]
 [ext_resource path="res://scripts/Pause_Menu.gd" type="Script" id=2]
-
 
 [sub_resource type="DynamicFont" id=1]
 size = 30
@@ -21,10 +20,10 @@ anchor_bottom = 1.0
 color = Color( 0, 0, 0, 0.403922 )
 
 [node name="ExitBtn" type="Button" parent="."]
-margin_left = 437.0
+margin_left = 447.0
 margin_top = 300.0
-margin_right = 587.0
-margin_bottom = 336.0
+margin_right = 597.0
+margin_bottom = 341.0
 custom_fonts/font = SubResource( 1 )
 text = "EXIT"
 
