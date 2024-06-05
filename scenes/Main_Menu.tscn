@@ -1,25 +1,24 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://scripts/Main_Menu.gd" type="Script" id=1]
-[ext_resource path="res://assets/Fonts/GODOFWAR.TTF" type="DynamicFontData" id=2]
 [ext_resource path="res://assets/Menus/shreya-das-ntcc-final-year-scifi-bg.jpg" type="Texture" id=3]
-[ext_resource path="res://Assets/Fonts/GODOFWAR.TTF" type="DynamicFontData" id=4]
+[ext_resource path="res://assets/Fonts/a_space/A-Space Regular Demo.otf" type="DynamicFontData" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 size = 100
-font_data = ExtResource( 2 )
+font_data = ExtResource( 5 )
 
 [sub_resource type="DynamicFont" id=2]
 size = 40
-font_data = ExtResource( 2 )
+font_data = ExtResource( 5 )
 
 [sub_resource type="DynamicFont" id=4]
 size = 40
-font_data = ExtResource( 4 )
+font_data = ExtResource( 5 )
 
 [sub_resource type="DynamicFont" id=3]
 size = 40
-font_data = ExtResource( 2 )
+font_data = ExtResource( 5 )
 
 [node name="Main_Menu" type="Control"]
 anchor_right = 1.0
@@ -29,9 +28,9 @@ script = ExtResource( 1 )
 [node name="TextureRect" type="TextureRect" parent="."]
 anchor_right = 1.85
 anchor_bottom = 1.743
-margin_right = -870.4
-margin_bottom = -445.8
-rect_scale = Vector2( 0.502, 0.507 )
+margin_right = 25.6
+margin_bottom = 35.2
+rect_scale = Vector2( 0.533, 0.558 )
 texture = ExtResource( 3 )
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
@@ -41,12 +40,12 @@ anchor_bottom = 1.0
 [node name="Label" type="Label" parent="."]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -423.0
+margin_left = -452.0
 margin_top = 38.0
-margin_right = 448.0
+margin_right = 451.0
 margin_bottom = 163.0
 custom_fonts/font = SubResource( 1 )
-text = "NOME DO JOGO"
+text = "Gravity Evade"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 anchor_left = 0.5
@@ -59,22 +58,22 @@ margin_right = 148.0
 margin_bottom = 150.0
 
 [node name="Start_button" type="Button" parent="VBoxContainer"]
-margin_right = 298.0
-margin_bottom = 46.0
+margin_right = 352.0
+margin_bottom = 52.0
 custom_fonts/font = SubResource( 2 )
 text = "START GAME"
 
 [node name="History_button" type="Button" parent="VBoxContainer"]
-margin_top = 50.0
-margin_right = 298.0
-margin_bottom = 96.0
+margin_top = 56.0
+margin_right = 352.0
+margin_bottom = 108.0
 custom_fonts/font = SubResource( 4 )
 text = "HISTORY"
 
 [node name="Exit_button" type="Button" parent="VBoxContainer"]
-margin_top = 100.0
-margin_right = 298.0
-margin_bottom = 146.0
+margin_top = 112.0
+margin_right = 352.0
+margin_bottom = 164.0
 custom_fonts/font = SubResource( 3 )
 text = "EXIT"
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scripts/GameOverMenu.gd" type="Script" id=1]
-[ext_resource path="res://assets/Fonts/GODOFWAR.TTF" type="DynamicFontData" id=2]
+[ext_resource path="res://assets/Fonts/a_space/A-Space Regular Demo.otf" type="DynamicFontData" id=2]
 [ext_resource path="res://assets/Menus/296480.jpg" type="Texture" id=3]
 
 [sub_resource type="DynamicFont" id=2]
@@ -46,10 +46,10 @@ anchor_left = 0.5
 anchor_top = 0.948
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -36.0
+margin_left = -25.0
 margin_top = -229.8
-margin_right = 42.0
-margin_bottom = -230.0
+margin_right = 59.0
+margin_bottom = -226.0
 custom_fonts/font = SubResource( 3 )
 text = "EXIT"
 

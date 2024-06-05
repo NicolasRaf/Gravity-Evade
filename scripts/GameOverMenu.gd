@@ -2,7 +2,8 @@ extends Control
 
 
 func _on_Restart_pressed():
-	get_tree().reload_current_scene()
+	Global.fragmentsTaken = 0
+	get_tree().change_scene(Global.currentScene)
 
 func _on_Exit_pressed():
-	get_tree().change_scene("res://Scenes/Main_Menu.tscn")
+	get_tree().quit()
