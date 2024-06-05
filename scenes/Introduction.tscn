@@ -1,0 +1,93 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Assets/Menus/HD-wallpaper-3d-blue-cubes-geometric-background-3d-blue-background-cubes.jpg" type="Texture" id=1]
+[ext_resource path="res://Assets/Fonts/GODOFWAR.TTF" type="DynamicFontData" id=2]
+[ext_resource path="res://Scripts/Introduction.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 52
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 22
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 30
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 31
+font_data = ExtResource( 2 )
+
+[node name="Introduction" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color( 1, 0.0588235, 1, 1 )
+self_modulate = Color( 0.717647, 0.717647, 0.717647, 1 )
+anchor_right = 1.048
+anchor_bottom = 1.161
+margin_right = 18.8479
+margin_bottom = 19.4
+texture = ExtResource( 1 )
+expand = true
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -376.0
+margin_top = 9.0
+margin_right = 411.0
+margin_bottom = 69.0
+custom_fonts/font = SubResource( 1 )
+text = "welcome to gravity evade!!"
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 36.0
+margin_top = 142.0
+margin_right = 1039.0
+margin_bottom = 662.0
+custom_fonts/font = SubResource( 2 )
+text = "-> Certainly! Here are the controls to help Nicolas escape the zero-gravity world 
+where he has been trapped for seven years and return to his homeland:
+
+-> Using the X button on the Arduino Esplora, the character jumps over obstacles 
+throughout the
+
+
+->When using the linear potentiometer, Nicolas adjusts gravity in his favor,
+ allowing him to navigate obstacles by walking on both the ceiling and the
+ floor of the scenario. However, remember that when altering gravity, the 
+entire scene becomes inverted.
+
+
+"
+
+[node name="Label3" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -260.0
+margin_top = -117.0
+margin_right = 319.0
+margin_bottom = -74.0
+custom_fonts/font = SubResource( 3 )
+text = "THE JOURNEY IS JUST BEGINNING..."
+
+[node name="Start" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -57.0
+margin_top = -37.0
+margin_right = 137.0
+margin_bottom = 1.0
+custom_fonts/font = SubResource( 4 )
+text = "CONTINUE"
+
+[connection signal="pressed" from="Start" to="." method="_on_Start_pressed"]
