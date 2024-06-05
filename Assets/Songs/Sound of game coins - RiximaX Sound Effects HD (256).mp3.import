@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Sound of game coins - RiximaX Sound Effects HD (256).mp3-216684c62f7c434321855779c8fc4946.mp3str"
+
+[deps]
+
+source_file="res://Assets/Songs/Sound of game coins - RiximaX Sound Effects HD (256).mp3"
+dest_files=[ "res://.import/Sound of game coins - RiximaX Sound Effects HD (256).mp3-216684c62f7c434321855779c8fc4946.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
