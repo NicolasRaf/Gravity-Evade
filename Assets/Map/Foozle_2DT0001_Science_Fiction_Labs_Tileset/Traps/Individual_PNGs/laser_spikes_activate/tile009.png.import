@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tile009.png-f2376907d7ace6fa2d44c5720744ef67.stex"
+path="res://.import/tile009.png-b5bf3c1e9b06093d8cfdcd7c34fe975b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Map/Foozle_2DT0001_Science_Fiction_Labs_Tileset/Traps/Individual_PNGs/laser_spikes_activate/tile009.png"
-dest_files=[ "res://.import/tile009.png-f2376907d7ace6fa2d44c5720744ef67.stex" ]
+source_file="res://assets/Map/Foozle_2DT0001_Science_Fiction_Labs_Tileset/Traps/Individual_PNGs/laser_spikes_activate/tile009.png"
+dest_files=[ "res://.import/tile009.png-b5bf3c1e9b06093d8cfdcd7c34fe975b.stex" ]
 
 [params]
 

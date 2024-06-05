@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://Scripts/GameOverMenu.gd" type="Script" id=1]
-[ext_resource path="res://Assets/Fonts/GODOFWAR.TTF" type="DynamicFontData" id=2]
-[ext_resource path="res://Assets/Menus/296480.jpg" type="Texture" id=3]
+[ext_resource path="res://scripts/GameOverMenu.gd" type="Script" id=1]
+[ext_resource path="res://assets/Fonts/GODOFWAR.TTF" type="DynamicFontData" id=2]
+[ext_resource path="res://assets/Menus/296480.jpg" type="Texture" id=3]
 
 
 [sub_resource type="DynamicFont" id=2]

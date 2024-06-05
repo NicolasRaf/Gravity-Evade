@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Saw.png-0cc67cb802b4ab5609592ac2506aa82d.stex"
+path="res://.import/Saw.png-dc6803d42c348b1a96aab685fcc583d3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Map/png/Objects/Saw.png"
-dest_files=[ "res://.import/Saw.png-0cc67cb802b4ab5609592ac2506aa82d.stex" ]
+source_file="res://assets/Map/png/Objects/Saw.png"
+dest_files=[ "res://.import/Saw.png-dc6803d42c348b1a96aab685fcc583d3.stex" ]
 
 [params]
 

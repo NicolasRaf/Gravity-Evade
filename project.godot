@@ -12,7 +12,7 @@ _global_script_classes=[ {
 "base": "KinematicBody2D",
 "class": "Player",
 "language": "GDScript",
-"path": "res://Scripts/Player.gd"
+"path": "res://scripts/Player.gd"
 } ]
 _global_script_class_icons={
 "Player": ""
@@ -21,12 +21,12 @@ _global_script_class_icons={
 [application]
 
 config/name="Gravity Evade"
-run/main_scene="res://Scenes/World.tscn"
+run/main_scene="res://scenes/World.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
-Global="*res://Scripts/Global.gd"
+Global="*res://scripts/Global.gd"
 
 [gui]
 
