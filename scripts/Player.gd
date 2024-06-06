@@ -1,6 +1,6 @@
 extends KinematicBody2D
 class_name Player
-
+onready var animatedSprite: AnimatedSprite = get_node("AnimatedSprite")
 onready var powerTimer: Timer = get_node("PowerTimer")
 onready var button : Button = get_node("PlayerHud/TimeSlow")
 onready var gravitySlider : VSlider = get_node("PlayerHud/GravitySlider")
@@ -10,13 +10,23 @@ var jumpForce : int = 500
 func _physics_process(delta):
 	
 	# Altera a escala do player com base no valor do slider
-	$AnimatedSprite.scale = Vector2(gravitySlider.value/2000,gravitySlider.value/2000)
+	if gravitySlider.value < 0:
+		animatedSprite.flip_v = true
+		animatedSprite.scale.x = 0.5
+	else:
+		animatedSprite.flip_v = false
+		
+
+	if gravitySlider.value < 0:
+		$CollisionShape2D.position.y = -44
+	else:
+		$CollisionShape2D.position.y = $AnimatedSprite.position.y + 13
 	
 	# Controla o flip.H para evitar que o player fique flipado ao mudar a escala pra negativa
-	if gravitySlider.value < 0:
-		$AnimatedSprite.flip_h = true
-	else:
-		$AnimatedSprite.flip_h = false
+#	if gravitySlider.value < 0:
+#		$AnimatedSprite.flip_h = true
+#	else:
+#		$AnimatedSprite.flip_h = false
 	
 	# Igual o valor da gravidade que afeta o player ao valor do sldier
 	var gravity = gravitySlider.value

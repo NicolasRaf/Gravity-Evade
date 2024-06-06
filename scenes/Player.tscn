@@ -61,14 +61,14 @@ extents = Vector2( 13.5, 18 )
 script = ExtResource( 3 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( -13.75, -31.25 )
+position = Vector2( 2, -32 )
 scale = Vector2( 0.527344, 0.496094 )
 frames = SubResource( 9 )
-frame = 6
+frame = 4
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -15.5, -19 )
+position = Vector2( 0, -18 )
 shape = SubResource( 10 )
 
 [node name="PlayerHud" type="CanvasLayer" parent="."]
@@ -100,7 +100,7 @@ focus_mode = 0
 enabled_focus_mode = 0
 
 [node name="Fragment" parent="PlayerHud" instance=ExtResource( 5 )]
-position = Vector2( 49, 43 )
+position = Vector2( 59, 47 )
 scale = Vector2( 3, 3 )
 
 [node name="FragmentsCount" type="Label" parent="PlayerHud"]

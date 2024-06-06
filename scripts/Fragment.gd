@@ -11,6 +11,8 @@ func _ready():
 # Função responsável por coletar o fragmento e aplicar seu SFX
 func _on_Fragmento_body_entered(body):
 	if body is Player:
+		monitoring = false
+		$CollisionShape2D.disabled = true
 		Global.fragmentsTaken += 1
 		pickupSound.play()
 		# Inicia a interpolação da escala para diminuir gradativamente
