@@ -2,7 +2,7 @@
 
 [ext_resource path="res://scripts/GameOverMenu.gd" type="Script" id=1]
 [ext_resource path="res://assets/Fonts/a_space/A-Space Regular Demo.otf" type="DynamicFontData" id=2]
-[ext_resource path="res://assets/Menus/296480.jpg" type="Texture" id=3]
+[ext_resource path="res://assets/Menus/Default_Make_this_image_more_dark_more_universe_0.jpg" type="Texture" id=3]
 
 [sub_resource type="DynamicFont" id=2]
 size = 25
@@ -26,8 +26,14 @@ anchor_right = 0.761
 anchor_bottom = 0.727
 margin_right = -219.264
 margin_bottom = -121.2
-rect_scale = Vector2( 1.829, 1.898 )
+rect_min_size = Vector2( 0, 0.023 )
+rect_scale = Vector2( 1, 1.036 )
 texture = ExtResource( 3 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.572549 )
 
 [node name="Restart" type="Button" parent="."]
 anchor_left = 0.5
