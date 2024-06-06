@@ -8,3 +8,6 @@ func _on_TimeSlow_pressed():
 	
 func _on_PowerTimer_timeout():
 	Engine.time_scale = 1
+
+func _process(delta):
+	value = float(EsploraInput.message_to_receive) - 1000

@@ -9,12 +9,18 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "",
+"class": "GDSerComm",
+"language": "NativeScript",
+"path": "res://addons/GDSerCommDock/bin/GDSerComm.gdns"
+}, {
 "base": "KinematicBody2D",
 "class": "Player",
 "language": "GDScript",
 "path": "res://scripts/Player.gd"
 } ]
 _global_script_class_icons={
+"GDSerComm": "",
 "Player": ""
 }
 
@@ -27,11 +33,16 @@ config/icon="res://icon.png"
 [autoload]
 
 Global="*res://scripts/Global.gd"
+EsploraInput="*res://scenes/EsploraInput.tscn"
 
 [display]
 
 window/stretch/mode="viewport"
 window/stretch/aspect="keep"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/GDSerCommDock/plugin.cfg" )
 
 [gui]
 

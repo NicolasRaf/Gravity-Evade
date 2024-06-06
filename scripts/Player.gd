@@ -5,7 +5,9 @@ onready var gravitySlider : VSlider = get_node("PlayerHud/GravitySlider")
 var direction : Vector2 = Vector2() # Vetor bidimensional,que inicialmente está em posição (0,0)
 var jumpForce : int = 500
 
+
 func _physics_process(delta):
+	
 	
 	# Altera a escala do player com base no valor do slider
 	if gravitySlider.value < 0:
@@ -31,3 +33,5 @@ func _physics_process(delta):
 		
 	direction = move_and_slide(direction, Vector2.UP) 
 	#Garante que o personagem não atravesse paredes e ande horizontalmente
+
+	print(EsploraInput.message_to_receive)
