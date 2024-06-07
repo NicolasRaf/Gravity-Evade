@@ -12,15 +12,14 @@ func _physics_process(delta):
 	# Altera a escala do player com base no valor do slider
 	if gravitySlider.value < 0:
 		animatedSprite.flip_v = true
-		animatedSprite.scale.x = 0.5
 	else:
 		animatedSprite.flip_v = false
 		
 
-	if gravitySlider.value < 0:
-		$CollisionShape2D.position.y = -44
-	else:
-		$CollisionShape2D.position.y = $AnimatedSprite.position.y + 13
+#	if gravitySlider.value < 0:
+#		$CollisionShape2D.position.y = -44
+#	else:
+#		$CollisionShape2D.position.y = $AnimatedSprite.position.y + 13
 	
 	# Igual o valor da gravidade que afeta o player ao valor do sldier
 	var gravity = gravitySlider.value

@@ -1,5 +1,5 @@
-
 #include <Esplora.h>
+
 
 void setup() {
   // put your setup code here, to run once:
@@ -7,8 +7,9 @@ void setup() {
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+    // put your main code here, to run repeatedly:
   int slider = Esplora.readSlider();
-  Serial.println(slider);
+  Serial.print(slider);
   delay(250);
+
 }

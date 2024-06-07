@@ -758,11 +758,10 @@ position = Vector2( 1539, 3 )
 position = Vector2( 1569, 4 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-unique_name_in_owner = true
-position = Vector2( 57, 0 )
+position = Vector2( 82, -3 )
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-position = Vector2( 3, 138 )
+position = Vector2( -22, 141 )
 rotating = true
 current = true
 zoom = Vector2( 0.4, 0.4 )
