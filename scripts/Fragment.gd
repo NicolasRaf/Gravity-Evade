@@ -16,7 +16,7 @@ func _on_Fragmento_body_entered(body):
 		Global.fragmentsTaken += 1
 		pickupSound.play()
 		# Inicia a interpolação da escala para diminuir gradativamente
-		tween.interpolate_property(self, "scale", scale, Vector2(0, 0), 0.3, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+		tween.interpolate_property($Fragments, "scale", Vector2(0.4,0.4), Vector2(0, 0), 0.3, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 		tween.start()
 		timerQueue.start()
 

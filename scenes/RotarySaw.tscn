@@ -44,7 +44,7 @@ radius = 10.0499
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 rotation = 1.5708
 frames = SubResource( 6 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="KillZone" parent="." instance=ExtResource( 2 )]
