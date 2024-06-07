@@ -9,7 +9,12 @@ void setup() {
 void loop() {
     // put your main code here, to run repeatedly:
   int slider = Esplora.readSlider();
+  int button = Esplora.readButton(SWITCH_DOWN);
+  slider = map(slider, 0, 1023, -100, 100);
+  Serial.print("sl");
+  Serial.print(":");
   Serial.print(slider);
-  delay(250);
-
+  Serial.print("]");
+  
+  delay(100);
 }
