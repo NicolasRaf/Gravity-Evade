@@ -19,9 +19,6 @@ stream = ExtResource( 2 )
 max_distance = 9.22337e+18
 bus = "SFX"
 
-[node name="TimerQueue" type="Timer" parent="."]
-wait_time = 0.55
-
 [node name="Fragments" type="Sprite" parent="."]
 position = Vector2( 0, -5.96046e-08 )
 scale = Vector2( 0.4, 0.4 )
@@ -29,4 +26,3 @@ texture = ExtResource( 3 )
 
 [connection signal="body_entered" from="." to="." method="_on_Fragmento_body_entered"]
 [connection signal="finished" from="PickupSound" to="." method="_on_PickupSound_finished"]
-[connection signal="timeout" from="TimerQueue" to="." method="_on_TimerQueue_timeout"]

@@ -34,4 +34,4 @@ func _physics_process(delta):
 	direction = move_and_slide(direction, Vector2.UP) 
 	#Garante que o personagem não atravesse paredes e ande horizontalmente
 
-	print(EsploraInput.message_to_receive)
+#	print(EsploraInput.message_to_receive)

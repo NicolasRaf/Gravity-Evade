@@ -68,8 +68,8 @@ points = PoolVector2Array( 10, 0, 42, 0, 42, 50, 10, 50 )
 [sub_resource type="ConvexPolygonShape2D" id=23]
 points = PoolVector2Array( 10, 0, 42, 0, 42, 50, 10, 50 )
 
-[sub_resource type="ConvexPolygonShape2D" id=19]
-points = PoolVector2Array( 0, 19, 32, 19, 32, 32, 0, 32 )
+[sub_resource type="ConvexPolygonShape2D" id=31]
+points = PoolVector2Array( 0, 0, 32, 0, 31.5299, 8.31537, 0.049469, 7.98047 )
 
 [sub_resource type="ConvexPolygonShape2D" id=28]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 17, 0, 17 )
@@ -435,14 +435,14 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 17, 0, 17 )
 37/navigation_offset = Vector2( 0, 0 )
 37/shape_offset = Vector2( 0, 0 )
 37/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-37/shape = SubResource( 19 )
+37/shape = SubResource( 31 )
 37/shape_one_way = false
 37/shape_one_way_margin = 1.0
 37/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 19 ),
+"shape": SubResource( 31 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 37/z_index = 0
@@ -585,21 +585,13 @@ tile_data = PoolIntArray( -1638236, 31, 0, -1638235, -1073741798, 0, -1638234, -
 position = Vector2( 383, -16 )
 
 [node name="Laser2" parent="TileMap/Laser" instance=ExtResource( 8 )]
-position = Vector2( 417, -16 )
-
-[node name="Laser3" parent="TileMap/Laser" instance=ExtResource( 8 )]
-position = Vector2( 928, -191 )
-rotation = -3.14974
+position = Vector2( 415, -16 )
 
 [node name="Laser4" parent="TileMap/Laser" instance=ExtResource( 8 )]
 position = Vector2( 608, -16 )
 
 [node name="Laser5" parent="TileMap/Laser" instance=ExtResource( 8 )]
 position = Vector2( 656, -16 )
-
-[node name="Laser6" parent="TileMap/Laser" instance=ExtResource( 8 )]
-position = Vector2( 928, -190 )
-rotation = 3.13769
 
 [node name="Laser7" parent="TileMap/Laser" instance=ExtResource( 8 )]
 position = Vector2( 1919, -15 )
@@ -639,26 +631,30 @@ position = Vector2( 2332, -113 )
 [node name="Saw" type="Node" parent="TileMap"]
 
 [node name="RotarySaw" parent="TileMap/Saw" instance=ExtResource( 5 )]
-position = Vector2( 528, -15 )
+position = Vector2( 528, -14 )
 
 [node name="RotarySaw2" parent="TileMap/Saw" instance=ExtResource( 5 )]
-position = Vector2( 559, -15 )
+position = Vector2( 560, -14 )
 
 [node name="RotarySaw3" parent="TileMap/Saw" instance=ExtResource( 5 )]
-position = Vector2( 801, -80 )
+position = Vector2( 803, -80 )
 rotation = -1.56864
 
 [node name="RotarySaw4" parent="TileMap/Saw" instance=ExtResource( 5 )]
-position = Vector2( 800, -113 )
+position = Vector2( 802, -112 )
 rotation = -1.56864
 
 [node name="RotarySaw5" parent="TileMap/Saw" instance=ExtResource( 5 )]
-position = Vector2( 800, -146 )
+position = Vector2( 802, -144 )
 rotation = -1.56864
 
 [node name="RotarySaw6" parent="TileMap/Saw" instance=ExtResource( 5 )]
-position = Vector2( 1022, -193 )
-rotation = -3.1208
+position = Vector2( 1024, -194 )
+rotation = -3.14159
+
+[node name="RotarySaw9" parent="TileMap/Saw" instance=ExtResource( 5 )]
+position = Vector2( 992, -194 )
+rotation = -3.14159
 
 [node name="RotarySaw7" parent="TileMap/Saw" instance=ExtResource( 5 )]
 position = Vector2( 1134, -194 )
