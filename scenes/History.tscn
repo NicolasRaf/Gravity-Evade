@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://assets/Menus/992152-geometry-poly-vector-dots-abstract-digital-art.png" type="Texture" id=1]
 [ext_resource path="res://scripts/History.gd" type="Script" id=3]
@@ -10,10 +10,6 @@ font_data = ExtResource( 4 )
 
 [sub_resource type="DynamicFont" id=2]
 size = 30
-font_data = ExtResource( 4 )
-
-[sub_resource type="DynamicFont" id=3]
-size = 40
 font_data = ExtResource( 4 )
 
 [sub_resource type="DynamicFont" id=4]
@@ -49,7 +45,7 @@ anchor_right = 0.5
 margin_left = -835.5
 margin_top = 40.0
 margin_right = 512.5
-margin_bottom = 137.0
+margin_bottom = 115.0
 rect_scale = Vector2( 0.625, 0.842 )
 custom_fonts/font = SubResource( 1 )
 text = "WELCOME TO GRAVITY`S EVADE"
@@ -60,33 +56,13 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -873.5
-margin_top = -381.5
+margin_top = -398.5
 margin_right = 144.5
-margin_bottom = -42.5
+margin_bottom = -21.5
 rect_scale = Vector2( 0.9, 0.9 )
 custom_fonts/font = SubResource( 2 )
-text = "Cubix, a physics enthusiast, has been trapped in a
-gravitational world for years.He explores the laws
- of gravity and realizes that a deep understanding 
-of gravity is the key to escape. After studying 
-relativity and quantum theory, he searches for a
-unifying equation to open a portal back home. 
-By manipulating gravity, Cubix creates a temporary 
-singularity, distorting space and revealing a 
-dimensional rift that could be his way back."
-
-[node name="Label3" type="Label" parent="."]
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-margin_left = -456.5
-margin_top = -592.0
-margin_right = 408.5
-margin_bottom = -523.0
-rect_scale = Vector2( 0.595, 0.52 )
-custom_fonts/font = SubResource( 3 )
-text = "THE JOURNEY IS JUST BEGINNING..."
+text = "Neutron, a programmed robot with a passion for physics, is trapped in an enigmatic base controlled by an unknown force that uses gravitational anomalies to hold prisoners. For years, he studies the laws of gravity, looking for a way to escape. By mastering the principles of relativity and quantum theory, Neutron formulates a unifying equation. With this equation, he creates a temporary singularity, distorting space and revealing a dimensional rift. This portal could be his way out of the base"
+autowrap = true
 
 [node name="Button" type="Button" parent="."]
 anchor_left = 0.5

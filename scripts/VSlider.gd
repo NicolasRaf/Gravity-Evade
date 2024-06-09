@@ -4,8 +4,8 @@ onready var powerTimer : Timer = $"../PowerTimer"
 onready var cooldownTimer : Timer = $"../CooldownTimer"
 onready var timeSlow : Button = $"../TimeSlow"
 
-func _process(delta: float) -> void:
-	value = EsploraInput.sliderValue
+#func _process(delta: float) -> void:
+#	value = EsploraInput.sliderValue
 	
 func _on_TimeSlow_pressed():
 	Engine.time_scale = 0.5
