@@ -1,7 +1,6 @@
 extends Area2D
 
 onready var pickupSound : AudioStreamPlayer2D = get_node("PickupSound")
-onready var timerQueue : Timer = get_node("TimerQueue")
 onready var tween : Tween = Tween.new()
 
 # Adiciona o Tween como um filho do nó ao iniciar
