@@ -93,7 +93,7 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=10]
-extents = Vector2( 9.5, 11 )
+extents = Vector2( 9.5, 11.25 )
 
 [node name="Player" type="KinematicBody2D"]
 z_index = 10
@@ -103,11 +103,10 @@ script = ExtResource( 3 )
 position = Vector2( 0, -15 )
 frames = SubResource( 9 )
 animation = "run"
-frame = 8
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 1, -11 )
+position = Vector2( 0, -9.75 )
 shape = SubResource( 10 )
 
 [node name="PowerTimer" type="Timer" parent="."]
