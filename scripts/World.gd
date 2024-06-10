@@ -1,7 +1,7 @@
 extends Node2D
 
 func _ready():
-	Global.nextScene = "res://scenes/levelTwo.tscn"
+	Global.nextScene = "levelTwo"
 	Global.currentScene = "res://scenes/World.tscn"
 	#Caminho da cena atual e da que será rodada a seguir
 	

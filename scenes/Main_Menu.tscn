@@ -96,6 +96,16 @@ custom_styles/hover = SubResource( 9 )
 custom_styles/normal = SubResource( 7 )
 text = "EXIT"
 
+[node name="Devs" type="Label" parent="."]
+margin_left = 13.0
+margin_top = 680.0
+margin_right = 275.0
+margin_bottom = 694.0
+rect_scale = Vector2( 1.5, 1.5 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Created by: Nicolas Rafael and Enzo Melo"
+
 [connection signal="pressed" from="VBoxContainer/Start_button" to="." method="_on_Start_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/History_button" to="." method="_on_History_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/Exit_button" to="." method="_on_Exit_button_pressed"]

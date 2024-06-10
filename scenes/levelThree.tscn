@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://scenes/KillZone.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/Map/Foozle_2DT0001_Science_Fiction_Labs_Tileset/Tileset/level_tileset.png" type="Texture" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://assets/Map/background1-3.png" type="Texture" id=9]
 [ext_resource path="res://scripts/levelThree.gd" type="Script" id=10]
 [ext_resource path="res://scenes/PortalEntry.tscn" type="PackedScene" id=11]
+[ext_resource path="res://scenes/FadeOutLayer.tscn" type="PackedScene" id=12]
 
 [sub_resource type="ConvexPolygonShape2D" id=4]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 17, 0, 17 )
@@ -712,7 +713,8 @@ shape = SubResource( 3 )
 position = Vector2( -12, -26 )
 
 [node name="Portal" parent="." instance=ExtResource( 8 )]
-position = Vector2( 3889, -204 )
+position = Vector2( 3900, -214 )
+scale = Vector2( 1.5, 1.5 )
 
 [node name="Fragments" type="Node" parent="."]
 
@@ -730,3 +732,6 @@ position = Vector2( 3296, -222 )
 
 [node name="Fragment2" parent="Fragments" instance=ExtResource( 7 )]
 position = Vector2( 1924, -165 )
+
+[node name="FadeOutLayer" parent="." instance=ExtResource( 12 )]
+visible = false

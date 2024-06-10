@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/'Defense Matrix' by Vyra 🇧🇪 _ Retro Music (No Copyright) 📍 (128).mp3-85c384f498c3a923147294b367c4365b.mp3str"
+
+[deps]
+
+source_file="res://assets/Songs/'Defense Matrix' by Vyra 🇧🇪 _ Retro Music (No Copyright) 📍 (128).mp3"
+dest_files=[ "res://.import/'Defense Matrix' by Vyra 🇧🇪 _ Retro Music (No Copyright) 📍 (128).mp3-85c384f498c3a923147294b367c4365b.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

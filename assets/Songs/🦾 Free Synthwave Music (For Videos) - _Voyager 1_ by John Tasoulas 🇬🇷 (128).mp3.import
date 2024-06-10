@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/🦾 Free Synthwave Music (For Videos) - _Voyager 1_ by John Tasoulas 🇬🇷 (128).mp3-864db1dc5a2ac7dd3f8350f894ea4754.mp3str"
+
+[deps]
+
+source_file="res://assets/Songs/🦾 Free Synthwave Music (For Videos) - _Voyager 1_ by John Tasoulas 🇬🇷 (128).mp3"
+dest_files=[ "res://.import/🦾 Free Synthwave Music (For Videos) - _Voyager 1_ by John Tasoulas 🇬🇷 (128).mp3-864db1dc5a2ac7dd3f8350f894ea4754.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

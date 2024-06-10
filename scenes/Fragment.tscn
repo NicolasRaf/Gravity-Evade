@@ -25,4 +25,3 @@ scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 3 )
 
 [connection signal="body_entered" from="." to="." method="_on_Fragmento_body_entered"]
-[connection signal="finished" from="PickupSound" to="." method="_on_PickupSound_finished"]

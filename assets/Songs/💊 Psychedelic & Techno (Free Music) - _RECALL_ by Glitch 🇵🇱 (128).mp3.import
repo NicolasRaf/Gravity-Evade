@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/💊 Psychedelic & Techno (Free Music) - _RECALL_ by Glitch 🇵🇱 (128).mp3-98fc1b1a1f321e065344347cd036d154.mp3str"
+
+[deps]
+
+source_file="res://assets/Songs/💊 Psychedelic & Techno (Free Music) - _RECALL_ by Glitch 🇵🇱 (128).mp3"
+dest_files=[ "res://.import/💊 Psychedelic & Techno (Free Music) - _RECALL_ by Glitch 🇵🇱 (128).mp3-98fc1b1a1f321e065344347cd036d154.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
