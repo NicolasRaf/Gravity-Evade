@@ -8,13 +8,14 @@ func _ready():
 func _unhandled_input(event):
 	if event.is_action_pressed("ui_cancel"):
 		visible = !visible
-		get_tree().paused = visible
+		Engine.time_scale = 0
 		ContinueBtn.grab_focus()
 
 
 func _on_ContinueBtn_pressed():
-	get_tree().paused = false
+	Engine.time_scale = 1
 	visible = false
+	get_tree().paused = false
 	
 func _on_ExitBtn_pressed():
-	get_tree().change_scene("res://Scenes/Main_Menu.tscn")
+	get_tree().change_scene("res://scenes/Main_Menu.tscn")

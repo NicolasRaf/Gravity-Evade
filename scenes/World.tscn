@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=2]
+[gd_scene load_steps=40 format=2]
 
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/Fragment.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://scenes/Portal.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/FadeOutLayer.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scenes/Laser.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/Pause_Menu.tscn" type="PackedScene" id=9]
 [ext_resource path="res://scripts/World.gd" type="Script" id=10]
 [ext_resource path="res://assets/Map/dggqyse-76b77fd2-a577-44f7-b3f4-151cdec2a610 - Copia.png" type="Texture" id=11]
 
@@ -914,4 +915,7 @@ limit_bottom = 30
 limit_smoothed = true
 
 [node name="FadeOutLayer" parent="." instance=ExtResource( 7 )]
+visible = false
+
+[node name="Pause_Menu" parent="." instance=ExtResource( 9 )]
 visible = false

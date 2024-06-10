@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://assets/Menus/992152-geometry-poly-vector-dots-abstract-digital-art.png" type="Texture" id=1]
+[ext_resource path="res://assets/Menus/_8c2da68d-379c-472c-8eec-6defd6d2c304.jpg" type="Texture" id=1]
 [ext_resource path="res://scripts/History.gd" type="Script" id=3]
 [ext_resource path="res://assets/Fonts/a_space/A-Space Regular Demo.otf" type="DynamicFontData" id=4]
 
@@ -19,34 +19,36 @@ font_data = ExtResource( 4 )
 [node name="History" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_right = 857.0
-margin_bottom = 457.0
+margin_right = -3.0
+margin_bottom = 5.0
 script = ExtResource( 3 )
 
 [node name="TextureRect" type="TextureRect" parent="."]
-modulate = Color( 0.596078, 0.576471, 0.576471, 1 )
+modulate = Color( 0.392157, 0.392157, 0.392157, 1 )
 anchor_right = 1.808
 anchor_bottom = 1.721
-margin_right = -1480.85
-margin_bottom = -739.097
+margin_right = 75.1841
+margin_bottom = 26.275
 rect_scale = Vector2( 0.536, 0.563 )
 texture = ExtResource( 1 )
+expand = true
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 anchor_right = 1.819
 anchor_bottom = 1.76
 margin_top = 2.0
-margin_right = -2395.54
-margin_bottom = -1257.32
+margin_right = -2620.2
+margin_bottom = -1360.52
 
 [node name="Label" type="Label" parent="."]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -835.5
-margin_top = 40.0
-margin_right = 512.5
-margin_bottom = 115.0
+margin_left = -427.5
+margin_top = 71.0
+margin_right = 920.5
+margin_bottom = 146.0
 rect_scale = Vector2( 0.625, 0.842 )
+custom_colors/font_color_shadow = Color( 0.968627, 0, 0, 1 )
 custom_fonts/font = SubResource( 1 )
 text = "WELCOME TO GRAVITY`S EVADE"
 
@@ -55,13 +57,15 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -873.5
-margin_top = -398.5
-margin_right = 144.5
-margin_bottom = -21.5
+margin_left = -619.5
+margin_top = -145.5
+margin_right = 784.5
+margin_bottom = 266.5
 rect_scale = Vector2( 0.9, 0.9 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0.745098, 0.239216, 0.239216, 1 )
 custom_fonts/font = SubResource( 2 )
-text = "Neutron, a programmed robot with a passion for physics, is trapped in an enigmatic base controlled by an unknown force that uses gravitational anomalies to hold prisoners. For years, he studies the laws of gravity, looking for a way to escape. By mastering the principles of relativity and quantum theory, Neutron formulates a unifying equation. With this equation, he creates a temporary singularity, distorting space and revealing a dimensional rift. This portal could be his way out of the base"
+text = "Gravity Evade tells the story of the challenges faced by Neutron, a programmed robot with a passion for physics, who is trapped in an enigmatic base controlled by an unknown force that uses gravitational anomalies to hold prisoners. For years, he studies the laws of gravity, looking for a way to escape. By mastering the principles of relativity and quantum theory, Neutron formulates a unifying equation. With this equation, he creates a temporary singularity, distorting space and revealing a dimensional rift. This portal could be his way out of the base."
 autowrap = true
 
 [node name="Button" type="Button" parent="."]
@@ -69,10 +73,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -513.5
-margin_top = -533.0
-margin_right = -300.5
-margin_bottom = -475.0
+margin_left = -115.5
+margin_top = -153.0
+margin_right = 97.5
+margin_bottom = -95.0
 custom_fonts/font = SubResource( 4 )
 text = "BACK"
 

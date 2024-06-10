@@ -20,18 +20,26 @@ anchor_bottom = 1.0
 color = Color( 0, 0, 0, 0.403922 )
 
 [node name="ExitBtn" type="Button" parent="."]
-margin_left = 578.0
-margin_top = 358.0
-margin_right = 728.0
-margin_bottom = 399.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -143.5
+margin_top = 44.0
+margin_right = 143.5
+margin_bottom = 85.0
 custom_fonts/font = SubResource( 1 )
-text = "EXIT"
+text = "QUIT TO MENU"
 
 [node name="ContinueBtn" type="Button" parent="."]
-margin_left = 549.0
-margin_top = 297.0
-margin_right = 755.0
-margin_bottom = 338.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -103.0
+margin_top = -20.5
+margin_right = 103.0
+margin_bottom = 20.5
 custom_fonts/font = SubResource( 2 )
 text = "CONTINUE"
 

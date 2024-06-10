@@ -11,5 +11,5 @@ dest_files=[ "res://.import/'Defense Matrix' by Vyra 🇧🇪 _ Retro Music (No 
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
