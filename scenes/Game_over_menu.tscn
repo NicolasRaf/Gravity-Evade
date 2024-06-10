@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://scripts/GameOverMenu.gd" type="Script" id=1]
 [ext_resource path="res://assets/Fonts/a_space/A-Space Regular Demo.otf" type="DynamicFontData" id=2]
 [ext_resource path="res://assets/Menus/Default_Make_this_image_more_dark_more_universe_0.jpg" type="Texture" id=3]
+[ext_resource path="res://assets/Fonts/ButtonsTheme.tres" type="Theme" id=4]
 
 [sub_resource type="DynamicFont" id=2]
 size = 25
@@ -47,7 +48,9 @@ margin_left = -62.0
 margin_top = 34.0
 margin_right = 106.0
 margin_bottom = 69.0
+theme = ExtResource( 4 )
 custom_fonts/font = SubResource( 2 )
+action_mode = 0
 text = "RESTART"
 
 [node name="Exit" type="Button" parent="."]
@@ -59,7 +62,9 @@ margin_left = -25.0
 margin_top = -229.8
 margin_right = 59.0
 margin_bottom = -226.0
+theme = ExtResource( 4 )
 custom_fonts/font = SubResource( 3 )
+action_mode = 0
 text = "EXIT"
 
 [node name="Label" type="Label" parent="."]
