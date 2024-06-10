@@ -30,8 +30,6 @@ margin_bottom = 52.0
 rect_scale = Vector2( 2, 2 )
 min_value = -1000.0
 max_value = 1000.0
-value = 1000.0
-tick_count = 2
 script = ExtResource( 3 )
 
 [node name="TimeSlow" type="Button" parent="."]
@@ -42,6 +40,7 @@ margin_top = 19.0
 margin_right = 88.0
 margin_bottom = 56.0
 focus_mode = 0
+action_mode = 0
 button_mask = 3
 enabled_focus_mode = 0
 shortcut = SubResource( 2 )

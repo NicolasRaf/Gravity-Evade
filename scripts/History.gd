@@ -1,8 +1,9 @@
 extends Control
 
-onready var back_button = $Button as Button
+onready var backButton = $Button as Button
+
 func _ready():
-	pass
+	backButton.grab_focus()
 
 func _on_Button_pressed():
 	get_tree().change_scene("res://scenes/Main_Menu.tscn")

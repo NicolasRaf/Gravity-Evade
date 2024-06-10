@@ -1,5 +1,7 @@
 extends Control
 
+
+
 func _ready():
 	Engine.time_scale = 1
 	Global.fragmentsTaken = 0
@@ -13,3 +15,6 @@ func _on_Exit_button_pressed():
 
 func _on_History_button_pressed():
 	get_tree().change_scene("res://scenes/History.tscn")
+
+func _process(delta):
+	print(EsploraInput.analogY)
