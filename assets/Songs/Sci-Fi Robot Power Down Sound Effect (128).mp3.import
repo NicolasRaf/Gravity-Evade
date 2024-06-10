@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Sci-Fi Robot Power Down Sound Effect (128).mp3-98723d3b4957200027f1819c66174a50.mp3str"
+
+[deps]
+
+source_file="res://assets/Songs/Sci-Fi Robot Power Down Sound Effect (128).mp3"
+dest_files=[ "res://.import/Sci-Fi Robot Power Down Sound Effect (128).mp3-98723d3b4957200027f1819c66174a50.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

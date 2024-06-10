@@ -27,7 +27,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Gravity Evade"
-run/main_scene="res://scenes/World.tscn"
+run/main_scene="res://scenes/Main_Menu.tscn"
 config/icon="res://icon.png"
 
 [autoload]
@@ -39,8 +39,6 @@ EsploraInput="*res://scenes/EsploraInput.tscn"
 
 window/size/width=1280
 window/size/height=720
-window/size/borderless=true
-window/size/fullscreen=true
 window/stretch/mode="viewport"
 window/stretch/aspect="keep"
 

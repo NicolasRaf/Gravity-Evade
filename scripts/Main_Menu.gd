@@ -2,10 +2,10 @@ extends Control
 
 func _ready():
 	Global.fragmentsTaken = 0
+	Global.nextScene = "levelOne"
 
 func _on_Start_button_pressed():
-	get_tree().change_scene("res://scenes/World.tscn")
-	
+	Global.transitionToScene(Global.nextScene)
 	
 func _on_Exit_button_pressed():
 	get_tree().quit()
