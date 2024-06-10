@@ -1,6 +1,7 @@
 extends Control
 
 func _ready():
+	Engine.time_scale = 1
 	Global.fragmentsTaken = 0
 	Global.nextScene = "levelOne"
 

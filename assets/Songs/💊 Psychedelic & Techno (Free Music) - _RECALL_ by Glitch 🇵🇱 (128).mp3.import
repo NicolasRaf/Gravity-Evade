@@ -11,5 +11,5 @@ dest_files=[ "res://.import/💊 Psychedelic & Techno (Free Music) - _RECALL_ by
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

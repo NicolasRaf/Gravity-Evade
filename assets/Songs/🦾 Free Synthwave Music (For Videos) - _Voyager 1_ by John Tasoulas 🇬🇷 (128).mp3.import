@@ -11,5 +11,5 @@ dest_files=[ "res://.import/🦾 Free Synthwave Music (For Videos) - _Voyager 1_
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
