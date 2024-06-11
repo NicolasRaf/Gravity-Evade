@@ -11,13 +11,13 @@ void loop() {
   int slider = Esplora.readSlider();
   int analogX = Esplora.readJoystickX();
   int analogY = Esplora.readJoystickY();
-  int analogButton = Esplora.readJoystickSwitch();
   int powerButton = Esplora.readButton(SWITCH_4);
+  int pauseButton = Esplora.readButton(SWITCH_3);
+  int interactButton = Esplora.readButton(SWITCH_1);
   int gravityRGB = map(slider, -1023, 1023, 255, 0);
-//  powerButton = map(powerButton, 0, 1, 20, 30);
   slider = map(slider, 0, 1023, -1000, 1000);
 
-    Esplora.writeRGB(gravityRGB,0,gravityRGB);
+  Esplora.writeRGB(gravityRGB,0,gravityRGB);
 
   Serial.print("sl");
   Serial.print(":");
@@ -37,17 +37,22 @@ void loop() {
 
   Serial.print("#");
 
-  Serial.print("anB");
-  Serial.print(":");    
-  Serial.print(analogButton);
-
-  Serial.print("#");
-
-  Serial.print("but");
+  Serial.print("bPo");
   Serial.print(":");    
   Serial.print(powerButton);
 
-   
+  Serial.print("#");
+
+  Serial.print("bPa");
+  Serial.print(":");    
+  Serial.print(pauseButton);
+
+  Serial.print("#");
+
+  Serial.print("bIn");
+  Serial.print(":");    
+  Serial.print(interactButton);
+
   Serial.print("]");
   
   delay(10);

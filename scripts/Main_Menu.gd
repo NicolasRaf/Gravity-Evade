@@ -16,5 +16,3 @@ func _on_Exit_button_pressed():
 func _on_History_button_pressed():
 	get_tree().change_scene("res://scenes/History.tscn")
 
-func _process(delta):
-	print(EsploraInput.analogY)
