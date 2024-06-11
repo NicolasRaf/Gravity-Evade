@@ -21,7 +21,7 @@ onready var readLabel = $"SerialReadRichTextLabel"
 func _ready():
 	#adding the port and baudrate options
 	_on_RefreshButton_pressed()
-
+	
 #On refreash button pressed update PORT lists
 func _on_RefreshButton_pressed():
 	portButton.clear()
