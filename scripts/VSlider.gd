@@ -5,7 +5,6 @@ onready var cooldownTimer : Timer = $"../CooldownTimer"
 onready var timeSlow : Button = $"../TimeSlow"
 
 func _process(delta: float) -> void:
-	
 	if Global.esploraConnect:
 		value = EsploraInput.sliderValue
 	

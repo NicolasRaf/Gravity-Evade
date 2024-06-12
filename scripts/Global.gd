@@ -22,25 +22,25 @@ var scenes_database: Dictionary = {
 }
 
 func _process(delta):
-	
+
 	if EsploraInput.analogY > 155 or EsploraInput.analogY < 150 and esploraConnect:
 		analogicInput()
 		set_process(false)
 		yield(get_tree().create_timer(0.134),"timeout")
 		set_process(true)
-		
+
 	if EsploraInput.interactButton == 0 and esploraConnect:
 		var event = InputEventAction.new()
 		event.action = "ui_accept"
 		event.pressed = true
 		get_tree().input_event(event)
-			
+
 	if EsploraInput.powerButton == 0 and esploraConnect:
 		var event = InputEventAction.new()
 		event.action = "interact"
 		event.pressed = true
-		get_tree().input_event(event)
-		
+#		get_tree().input_event(event)
+
 func analogicInput():
 	if EsploraInput.analogY > 500:
 		var event = InputEventAction.new()
