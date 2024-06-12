@@ -3,6 +3,7 @@ extends Node2D
 func _ready():
 	Global.nextScene = "levelTwo"
 	Global.currentScene = "res://scenes/World.tscn"
+	Global.isTutorialRun = false
 	#Caminho da cena atual e da que será rodada a seguir
 	
 	Global.fragmentsMissing = get_node("Fragments").get_child_count()

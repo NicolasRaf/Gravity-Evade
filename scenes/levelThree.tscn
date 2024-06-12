@@ -681,7 +681,7 @@ z_index = -2
 texture = ExtResource( 9 )
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
-position = Vector2( 28, 0 )
+position = Vector2( 28, -16 )
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2( -18, -19 )

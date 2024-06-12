@@ -31,6 +31,7 @@ rect_rotation = 180.0
 rect_scale = Vector2( 2, 2 )
 min_value = -1000.0
 max_value = 1000.0
+value = 1.0
 script = ExtResource( 3 )
 
 [node name="TimeSlow" type="Button" parent="."]
