@@ -16,7 +16,7 @@ void loop() {
   int interactButton = Esplora.readButton(SWITCH_1);
   int gravityRGB = map(slider, -1023, 1023, 255, 0);
   slider = map(slider, 0, 1023, -1000, 1000);
-
+  
   Esplora.writeRGB(gravityRGB,0,gravityRGB);
 
   Serial.print("sl");

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://assets/Map/new_tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=2]
@@ -19,6 +19,12 @@ font_data = ExtResource( 4 )
 [sub_resource type="DynamicFont" id=2]
 size = 10
 font_data = ExtResource( 11 )
+
+[sub_resource type="InputEventAction" id=3]
+action = "skip"
+
+[sub_resource type="ShortCut" id=4]
+shortcut = SubResource( 3 )
 
 [node name="TutorialLevel" type="Node2D"]
 script = ExtResource( 5 )
@@ -107,4 +113,14 @@ margin_top = -93.0
 margin_right = 187.0
 margin_bottom = -79.0
 custom_fonts/font = SubResource( 2 )
-text = "Press enter to skip"
+text = "Press top Button(enter) to skip"
+
+[node name="SkipButton" type="Button" parent="."]
+margin_left = -147.0
+margin_top = -70.0
+margin_right = -135.0
+margin_bottom = -50.0
+action_mode = 0
+shortcut = SubResource( 4 )
+
+[connection signal="pressed" from="SkipButton" to="." method="_on_SkipButton_pressed"]

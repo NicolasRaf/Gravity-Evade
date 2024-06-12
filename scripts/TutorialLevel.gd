@@ -31,9 +31,6 @@ func _process(delta):
 	
 	Global.fragmentsMissing = get_node("Fragments").get_child_count()
 	# Contagem do número de fragmentos no level
-	
-	if Input.is_action_just_pressed("skip"):
-		Global.transitionToScene(Global.nextScene)
 		
 	if player.position.y >= -19.576 and Global.fragmentsTaken != 1:
 		yield(get_tree().create_timer(5), "timeout")
@@ -67,4 +64,5 @@ func _process(delta):
 		Global.isTutorialRun = false
 
 
-	
+func _on_SkipButton_pressed() -> void:
+	Global.transitionToScene(Global.nextScene)
