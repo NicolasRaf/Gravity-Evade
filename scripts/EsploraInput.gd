@@ -18,7 +18,8 @@ var baudRate = 9600
 var message_to_send
 
 func _ready():
-	
+	print(PORT)
+
 	set_physics_process(false)
 	PORT.close()
 	if port!=null and baudRate!=0:
@@ -28,10 +29,10 @@ func _ready():
 		print("Não foi possível estabelecer uma comunicação com a porta desejada. Cheque se a porta desejada foi selecionada corretamente.")
 	set_physics_process(true)
 	print("Porta Esplora: ", port)
-	
-	
+
+
 func _physics_process(delta):
-	
+
 	if PORT != null && PORT.get_available()>0:
 		Global.esploraConnect = true
 		for i in range(PORT.get_available()):
@@ -45,7 +46,7 @@ func _physics_process(delta):
 				serialMessage += _currentChar # Adiciona o caractere na mensagem 
 	else:
 		Global.esploraConnect = false
-	
+
 # Adiciona as informações enviadas pelos sensores às suas respectivas variáveis
 func unpackMessage(message) -> void:
 	var sensorTags : Array = message.split("#") # Array dos inputs enviados pelo Esplora onde a "#" é o char que indica o fim do input

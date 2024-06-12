@@ -1,8 +1,8 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scripts/GameOverMenu.gd" type="Script" id=1]
 [ext_resource path="res://assets/Fonts/a_space/A-Space Regular Demo.otf" type="DynamicFontData" id=2]
-[ext_resource path="res://assets/Menus/Default_Make_this_image_more_dark_more_universe_0.jpg" type="Texture" id=3]
+[ext_resource path="res://assets/Menus/Game_Over.jpg" type="Texture" id=3]
 [ext_resource path="res://assets/Fonts/ButtonsTheme.tres" type="Theme" id=4]
 
 [sub_resource type="DynamicFont" id=2]
@@ -11,10 +11,6 @@ font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=3]
 size = 25
-font_data = ExtResource( 2 )
-
-[sub_resource type="DynamicFont" id=1]
-size = 40
 font_data = ExtResource( 2 )
 
 [node name="Game_over_menu" type="Control"]
@@ -37,43 +33,37 @@ expand = true
 [node name="ColorRect" type="ColorRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color( 0, 0, 0, 0.572549 )
+color = Color( 0, 0, 0, 0.313726 )
 
 [node name="Restart" type="Button" parent="."]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -62.0
-margin_top = 34.0
-margin_right = 106.0
-margin_bottom = 69.0
+margin_left = -84.0
+margin_top = -17.5
+margin_right = 84.0
+margin_bottom = 17.5
 theme = ExtResource( 4 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 2 )
 action_mode = 0
 text = "RESTART"
 
 [node name="Exit" type="Button" parent="."]
 anchor_left = 0.5
-anchor_top = 0.948
+anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 1.0
-margin_left = -25.0
-margin_top = -229.8
-margin_right = 59.0
-margin_bottom = -226.0
+anchor_bottom = 0.5
+margin_left = -42.0
+margin_top = 26.0
+margin_right = 42.0
+margin_bottom = 67.24
 theme = ExtResource( 4 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 3 )
 action_mode = 0
 text = "EXIT"
-
-[node name="Label" type="Label" parent="."]
-margin_left = 498.0
-margin_top = 193.0
-margin_right = 809.0
-margin_bottom = 239.0
-custom_fonts/font = SubResource( 1 )
-text = "GAME OVER"
 
 [connection signal="pressed" from="Restart" to="." method="_on_Restart_pressed"]
 [connection signal="pressed" from="Exit" to="." method="_on_Exit_pressed"]
