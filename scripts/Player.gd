@@ -4,8 +4,6 @@ class_name Player
 onready var animatedSprite: AnimatedSprite = get_node("AnimatedSprite")
 onready var gravitySlider : VSlider = get_node("PlayerHud/GravitySlider")
 var direction : Vector2 = Vector2() # Vetor bidimensional,que inicialmente está em posição (0,0)
-var jumpForce : int = 500
-
 
 func _physics_process(delta):
 	if Global.isDead:

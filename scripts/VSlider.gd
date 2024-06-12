@@ -9,7 +9,7 @@ func _process(delta: float) -> void:
 		value = EsploraInput.sliderValue
 	
 func _on_TimeSlow_pressed():
-	Engine.time_scale = 0.5
+	Engine.time_scale = 0.4
 	powerTimer.start()
 	
 func _on_PowerTimer_timeout():
