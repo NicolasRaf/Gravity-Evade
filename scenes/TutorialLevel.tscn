@@ -1,0 +1,54 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/Map/new_tileset.tres" type="TileSet" id=1]
+[ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/Map/Animated/Strip And GIF/space9_4-frames.png" type="Texture" id=3]
+[ext_resource path="res://assets/Fonts/a_space/A-Space Black Demo.otf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 13
+font_data = ExtResource( 4 )
+
+[node name="TutorialLevel" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2( 29, -708 )
+scale = Vector2( 1.278, 1 )
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 8, 8 )
+show_collision = true
+format = 1
+tile_data = PoolIntArray( 4194300, 25, 0, 4128768, 26, 0, 4128772, 26, 0, 4128776, 26, 0, 4128780, 26, 0, 4128784, 26, 0, 4128788, 26, 0, 4128792, 26, 0, 4128796, 26, 0, 4128800, 26, 0, 4128801, 26, 0, 4128805, 26, 0, 4128809, 26, 0, 4128813, 26, 0, 4128817, 26, 0, 4325372, 29, 0, 4325373, 30, 0, 4259841, 30, 0, 4259845, 30, 0, 4259849, 30, 0, 4259853, 30, 0, 4259857, 30, 0, 4259861, 30, 0, 4259865, 30, 0, 4259869, 30, 0, 4259873, 30, 0, 4259877, 30, 0, 4259881, 30, 0, 4259885, 30, 0, 4259889, 30, 0, 4456444, 48, 0, 4521980, 48, 0, 4587516, 48, 0, 4653052, 48, 0, 4718588, 48, 0, 4784124, 48, 0, 4915196, 48, 0, 5046268, 47, 0, 5177340, 47, 0, 5308412, 48, 0, 5439484, 49, 0, 5570556, 50, 0, 5701628, 51, 0, 5832700, 52, 0, 5767168, 26, 0, 5767172, 26, 0, 5767176, 26, 0, 5767180, 26, 0, 5767184, 26, 0, 5767188, 26, 0, 5767192, 26, 0, 5767196, 26, 0, 5767200, 26, 0, 5767201, 26, 0, 5767205, 26, 0, 5767209, 26, 0, 5767213, 26, 0, 5767217, 26, 0, 5963773, 30, 0, 5898241, 30, 0, 5898245, 30, 0, 5898249, 30, 0, 5898253, 30, 0, 5898257, 30, 0, 5898261, 30, 0, 5898265, 30, 0, 5898269, 30, 0, 5898273, 30, 0, 5898277, 30, 0, 5898281, 30, 0, 5898285, 30, 0, 5898289, 30, 0 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 58, -8 )
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+current = true
+zoom = Vector2( 0.4, 0.293 )
+limit_left = 0
+limit_top = -192
+limit_right = 562
+limit_bottom = 20
+limit_smoothed = true
+editor_draw_limits = true
+editor_draw_drag_margin = true
+
+[node name="Space" type="Sprite" parent="."]
+modulate = Color( 0.4, 0, 0.972549, 1 )
+self_modulate = Color( 0.341176, 0.317647, 0.317647, 1 )
+position = Vector2( 344, -87 )
+scale = Vector2( 0.498, 0.554 )
+z_index = -1
+texture = ExtResource( 3 )
+
+[node name="Comands" type="Label" parent="."]
+margin_left = 56.0
+margin_top = -144.0
+margin_right = 417.0
+margin_bottom = -109.0
+custom_fonts/font = SubResource( 1 )
+text = "Use the slider to control the gravity
+Go to the roof, Try It!"
+align = 1
+uppercase = true
