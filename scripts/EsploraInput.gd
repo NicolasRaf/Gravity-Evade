@@ -12,14 +12,12 @@ var pauseButton: float = 0.0
 var sliderValue: int = 0
 var serialMessage = "" # Mensagem enviada pelo Esplora que contém os valores dos sensores.
 
-
-var port = "/dev/ttyACM1"
+var port = ""
 var baudRate = 9600
 var message_to_send
 
 func _ready():
-	print(PORT)
-
+	port = PORT.list_ports()[-1] # Obter ultima porta do array de portas
 	set_physics_process(false)
 	PORT.close()
 	if port!=null and baudRate!=0:
@@ -32,7 +30,6 @@ func _ready():
 
 
 func _physics_process(delta):
-
 	if PORT != null && PORT.get_available()>0:
 		Global.esploraConnect = true
 		for i in range(PORT.get_available()):
