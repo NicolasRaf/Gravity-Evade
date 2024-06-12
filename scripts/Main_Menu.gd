@@ -5,7 +5,7 @@ extends Control
 func _ready():
 	Engine.time_scale = 1
 	Global.fragmentsTaken = 0
-	Global.nextScene = "levelOne"
+	Global.nextScene = "tutorial"
 
 func _on_Start_button_pressed():
 	Global.transitionToScene(Global.nextScene)

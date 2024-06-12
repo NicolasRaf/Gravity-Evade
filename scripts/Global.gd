@@ -1,5 +1,7 @@
 extends Node
 
+var controlSlide : bool;
+var isTutorialRun = false
 var esploraConnect = false
 var is_button_pressed = false
 var currentScene = ""
@@ -13,6 +15,7 @@ var actualSceneKey: String = ""
 # Banco de dados de cenas
 var scenes_database: Dictionary = {
 	"main": preload("res://scenes/Main_Menu.tscn"),
+	"tutorial": preload("res://scenes/TutorialLevel.tscn"),
 	"levelOne": preload("res://scenes/World.tscn"),
 	"levelTwo": preload("res://scenes/levelTwo.tscn"),  
 	"levelThree": preload("res://scenes/levelThree.tscn"),  
