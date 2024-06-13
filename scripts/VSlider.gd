@@ -5,8 +5,12 @@ onready var cooldownTimer : Timer = $"../CooldownTimer"
 onready var timeSlow : Button = $"../TimeSlow"
 
 func _process(delta: float) -> void:
-	if Global.esploraConnect:
-		value = EsploraInput.sliderValue
+	if Global.esploraConnect and Global.controlSlide:
+		value = EsploraInput.sliderValue 
+	elif ! Global.controlSlide:
+		editable = false
+	else:
+		editable = true
 	
 func _on_TimeSlow_pressed():
 	Engine.time_scale = 0.4

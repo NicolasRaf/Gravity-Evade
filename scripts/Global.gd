@@ -1,5 +1,7 @@
 extends Node
 
+var controlSlide : bool = true
+var isTutorialRun = false
 var esploraConnect = false
 var is_button_pressed = false
 var currentScene = ""
@@ -13,6 +15,7 @@ var actualSceneKey: String = ""
 # Banco de dados de cenas
 var scenes_database: Dictionary = {
 	"main": preload("res://scenes/Main_Menu.tscn"),
+	"tutorial": preload("res://scenes/TutorialLevel.tscn"),
 	"levelOne": preload("res://scenes/World.tscn"),
 	"levelTwo": preload("res://scenes/levelTwo.tscn"),  
 	"levelThree": preload("res://scenes/levelThree.tscn"),  
@@ -22,7 +25,8 @@ var scenes_database: Dictionary = {
 }
 
 func _process(delta):
-
+	print("Pause: ", EsploraInput.pauseButton)
+	
 	if EsploraInput.analogY > 155 or EsploraInput.analogY < 150 and esploraConnect:
 		analogicInput()
 		set_process(false)
@@ -34,12 +38,18 @@ func _process(delta):
 		event.action = "ui_accept"
 		event.pressed = true
 		get_tree().input_event(event)
+				
+	if EsploraInput.pauseButton == 0 and esploraConnect:
+		var event = InputEventAction.new()
+		event.action = "skip"
+		event.pressed = true
+		get_tree().input_event(event)
 
 	if EsploraInput.powerButton == 0 and esploraConnect:
 		var event = InputEventAction.new()
 		event.action = "interact"
 		event.pressed = true
-#		get_tree().input_event(event)
+		get_tree().input_event(event)
 
 func analogicInput():
 	if EsploraInput.analogY > 500:
