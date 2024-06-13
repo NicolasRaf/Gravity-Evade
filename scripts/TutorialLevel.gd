@@ -48,19 +48,18 @@ func _process(delta):
 		yield(get_tree().create_timer(5), "timeout")
 		comands.text = "Now run to the end of the stage, \n a portal awaits you there!"
 		yield(get_tree().create_timer(5), "timeout")
-		comands.text = ""
-		yield(get_tree().create_timer(1), "timeout")
+		comands.visible = false
 		comands.text = "Obstacles, watch out! \n Control gravity precisely to pass."
 		Global.isTutorialRun = false
-
+    
 	if player.position.x >= 480:
 		Global.isTutorialRun = true
 		comands.visible = true
 		comands.rect_position.x = 288
 		yield(get_tree().create_timer(7), "timeout")
-		comands.text = "Use your time control by pressing the \n right button to slow down time! Good Luck!"
+		comands.text = "Use your time control by pressing the \n right button to slow down time! \n or space Good Luck!"
 		Global.controlSlide = true
-		yield(get_tree().create_timer(5), "timeout")
+		yield(get_tree().create_timer(8), "timeout")
 		Global.isTutorialRun = false
 
 
