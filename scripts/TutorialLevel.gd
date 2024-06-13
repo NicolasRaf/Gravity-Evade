@@ -51,8 +51,7 @@ func _process(delta):
 		comands.visible = false
 		comands.text = "Obstacles, watch out! \n Control gravity precisely to pass."
 		Global.isTutorialRun = false
-
-
+    
 	if player.position.x >= 480:
 		Global.isTutorialRun = true
 		comands.visible = true
