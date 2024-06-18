@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://scripts/PowerBar.gd" type="Script" id=1]
 [ext_resource path="res://scripts/Label.gd" type="Script" id=2]
@@ -6,6 +6,15 @@
 [ext_resource path="res://scenes/Fragment.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/Fonts/a_space/A-Space Bold Demo.otf" type="DynamicFontData" id=5]
 [ext_resource path="res://scripts/FullPower.gd" type="Script" id=6]
+[ext_resource path="res://scripts/TextureProgress.gd" type="Script" id=7]
+[ext_resource path="res://assets/bar/lifebar_back.png" type="Texture" id=8]
+[ext_resource path="res://assets/bar/lifebar_content.png" type="Texture" id=9]
+[ext_resource path="res://assets/bar/bar.png" type="Texture" id=10]
+[ext_resource path="res://assets/Robot/slider.png" type="Texture" id=11]
+
+[sub_resource type="Theme" id=7]
+
+[sub_resource type="StyleBoxFlat" id=6]
 
 [sub_resource type="InputEventAction" id=4]
 action = "interact"
@@ -29,10 +38,19 @@ margin_right = -28.0
 margin_bottom = 263.0
 rect_rotation = 180.0
 rect_scale = Vector2( 2, 2 )
+theme = SubResource( 7 )
+custom_styles/slider = SubResource( 6 )
 min_value = -1000.0
 max_value = 1000.0
 value = 1.0
 script = ExtResource( 3 )
+
+[node name="Slider" type="Sprite" parent="GravitySlider"]
+show_behind_parent = true
+position = Vector2( 8, 44.75 )
+rotation = -3.14159
+scale = Vector2( 1.5, 1.45625 )
+texture = ExtResource( 11 )
 
 [node name="TimeSlow" type="Button" parent="."]
 anchor_left = 1.0
@@ -53,10 +71,10 @@ z_index = 0
 one_shot = true
 
 [node name="PowerBar" type="ProgressBar" parent="."]
-margin_left = 982.0
-margin_top = 25.0
-margin_right = 1228.0
-margin_bottom = 62.0
+margin_left = 990.0
+margin_top = -57.0
+margin_right = 1236.0
+margin_bottom = -20.0
 rect_min_size = Vector2( 50, 1 )
 max_value = 5.0
 percent_visible = false
@@ -75,10 +93,10 @@ wait_time = 5.0
 one_shot = true
 
 [node name="FullPower" type="Label" parent="."]
-margin_left = 1033.0
-margin_top = 77.0
-margin_right = 1184.0
-margin_bottom = 96.0
+margin_left = 1058.0
+margin_top = 68.0
+margin_right = 1209.0
+margin_bottom = 87.0
 rect_scale = Vector2( 1.2, 1.2 )
 rect_pivot_offset = Vector2( 75, 0 )
 custom_colors/font_color = Color( 0.52549, 0.0352941, 0.54902, 1 )
@@ -86,6 +104,30 @@ custom_colors/font_color_shadow = Color( 0.454902, 0.0352941, 0.0352941, 1 )
 custom_fonts/font = SubResource( 3 )
 text = "FULL POWER!!!"
 script = ExtResource( 6 )
+
+[node name="TextureProgress" type="TextureProgress" parent="."]
+anchor_right = 0.031
+margin_left = 1048.0
+margin_top = 34.0
+margin_right = 1073.32
+margin_bottom = 40.0
+rect_scale = Vector2( 3.114, 3 )
+max_value = 5.0
+step = 0.001
+value = 5.0
+texture_progress = ExtResource( 9 )
+tint_progress = Color( 0.772549, 0, 0.709804, 1 )
+script = ExtResource( 7 )
+
+[node name="LifebarBack" type="Sprite" parent="TextureProgress"]
+position = Vector2( 27.6172, 0.333336 )
+scale = Vector2( 0.991972, 1 )
+texture = ExtResource( 8 )
+
+[node name="Bar" type="Sprite" parent="TextureProgress"]
+position = Vector2( -4.65634, -0.333334 )
+scale = Vector2( 0.328429, 0.333333 )
+texture = ExtResource( 10 )
 
 [connection signal="pressed" from="TimeSlow" to="GravitySlider" method="_on_TimeSlow_pressed"]
 [connection signal="pressed" from="TimeSlow" to="PowerBar" method="_on_TimeSlow_pressed"]

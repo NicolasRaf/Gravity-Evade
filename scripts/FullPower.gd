@@ -15,8 +15,8 @@ func _process(delta) -> void:
 		visible = true
 		
 	if rect_rotation == 5:
-		tween.interpolate_property(self, "rect_rotation", 5, -5, 1, Tween.TRANS_SINE, Tween.EASE_IN_OUT)
+		tween.interpolate_property(self, "rect_rotation", 5, -5, 0.5, Tween.TRANS_SINE, Tween.EASE_IN_OUT)
 		tween.start()
 	elif rect_rotation == -5:
-		tween.interpolate_property(self, "rect_rotation", -5, 5, 1, Tween.TRANS_SINE, Tween.EASE_IN_OUT)
+		tween.interpolate_property(self, "rect_rotation", -5, 5, 0.5, Tween.TRANS_SINE, Tween.EASE_IN_OUT)
 		tween.start()

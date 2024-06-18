@@ -11,21 +11,22 @@ func _ready():
 	add_child(tween)
 	
 	Global.controlSlide = false
+	Global.isTutorialRun = true
+	Global.nextScene = "levelOne"  #Caminho da cena que será rodada a seguir
+	Global.currentScene = "res://scenes/TutorialLevel.tscn" #Caminho da cena atual
 	
 	player.position = Vector2(68,-19.5760)
 	comands.rect_position.x = 4
-	
 	fragment.visible = false
 	fragment.monitoring = false
 	
-	Global.nextScene = "levelOne"
-	Global.currentScene = "res://scenes/TutorialLevel.tscn"
-	#Caminho da cena atual e da que será rodada a seguir
 
-	tween.interpolate_property(skip, "self_modulate", Color(255,255,255,1),  Color(255,255,255,0), 4, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
-	tween.start()
+
 	
-	Global.isTutorialRun = true
+	
+	tween.interpolate_property(skip, "self_modulate", Color(0,0,0,1),  Color(0,0,0,0), 4, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+	yield(get_tree().create_timer(2),"timeout")
+	tween.start()
 
 func _process(delta):
 	
@@ -51,7 +52,7 @@ func _process(delta):
 		comands.visible = false
 		comands.text = "Obstacles, watch out! \n Control gravity precisely to pass."
 		Global.isTutorialRun = false
-    
+	
 	if player.position.x >= 480:
 		Global.isTutorialRun = true
 		comands.visible = true
