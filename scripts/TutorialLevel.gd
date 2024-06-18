@@ -58,7 +58,7 @@ func _process(delta):
 		comands.visible = true
 		comands.rect_position.x = 288
 		yield(get_tree().create_timer(7), "timeout")
-		comands.text = "Use your time control by pressing the \n right button to slow down time! \n or space Good Luck!"
+		comands.text = "Control the time using the \n right button(space). \n Good Luck!"
 		Global.controlSlide = true
 		yield(get_tree().create_timer(8), "timeout")
 		Global.isTutorialRun = false

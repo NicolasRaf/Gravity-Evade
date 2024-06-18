@@ -4,7 +4,7 @@ func _ready():
 	Global.nextScene = "levelTwo"
 	Global.currentScene = "res://scenes/World.tscn"
 	Global.isTutorialRun = false
-	Global.fragmentsMissing = 0
+	Global.fragmentsTaken = 0
 	Global.controlSlide = true
 	#Caminho da cena atual e da que será rodada a seguir
 	
