@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://scripts/PowerBar.gd" type="Script" id=1]
 [ext_resource path="res://scripts/Label.gd" type="Script" id=2]
@@ -11,6 +11,9 @@
 [ext_resource path="res://assets/bar/lifebar_content.png" type="Texture" id=9]
 [ext_resource path="res://assets/bar/bar.png" type="Texture" id=10]
 [ext_resource path="res://assets/Robot/slider.png" type="Texture" id=11]
+[ext_resource path="res://assets/Robot/avanco-rapido/sprite_0.png" type="Texture" id=12]
+[ext_resource path="res://assets/Robot/avanco-rapido/sprite_1.png" type="Texture" id=13]
+[ext_resource path="res://assets/Robot/avanco-rapido/sprite_2.png" type="Texture" id=14]
 
 [sub_resource type="Theme" id=7]
 
@@ -24,6 +27,29 @@ shortcut = SubResource( 4 )
 
 [sub_resource type="DynamicFont" id=3]
 font_data = ExtResource( 5 )
+
+[sub_resource type="AtlasTexture" id=8]
+flags = 4
+atlas = ExtResource( 12 )
+region = Rect2( 0, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=9]
+flags = 4
+atlas = ExtResource( 13 )
+region = Rect2( 0, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=10]
+flags = 4
+atlas = ExtResource( 14 )
+region = Rect2( 0, 0, 128, 128 )
+
+[sub_resource type="SpriteFrames" id=11]
+animations = [ {
+"frames": [ SubResource( 8 ), SubResource( 9 ), SubResource( 10 ) ],
+"loop": true,
+"name": "default",
+"speed": 4.0
+} ]
 
 [node name="PlayerHud" type="CanvasLayer"]
 
@@ -104,6 +130,14 @@ custom_colors/font_color_shadow = Color( 0.454902, 0.0352941, 0.0352941, 1 )
 custom_fonts/font = SubResource( 3 )
 text = "FULL POWER!!!"
 script = ExtResource( 6 )
+
+[node name="Seta" type="AnimatedSprite" parent="."]
+position = Vector2( 52, 427 )
+rotation = 1.5708
+scale = Vector2( 0.3, 0.3 )
+frames = SubResource( 11 )
+frame = 1
+playing = true
 
 [node name="TextureProgress" type="TextureProgress" parent="."]
 anchor_right = 0.031
