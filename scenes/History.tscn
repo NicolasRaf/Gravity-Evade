@@ -24,7 +24,7 @@ margin_bottom = 5.0
 script = ExtResource( 3 )
 
 [node name="TextureRect" type="TextureRect" parent="."]
-modulate = Color( 0.392157, 0.392157, 0.392157, 1 )
+modulate = Color( 0.286275, 0.270588, 0.270588, 1 )
 anchor_right = 1.808
 anchor_bottom = 1.721
 margin_right = 75.1841
@@ -57,15 +57,19 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -619.5
-margin_top = -145.5
-margin_right = 784.5
-margin_bottom = 266.5
-rect_scale = Vector2( 0.9, 0.9 )
+margin_left = -626.5
+margin_top = -208.5
+margin_right = 634.5
+margin_bottom = 244.5
+rect_scale = Vector2( 1, 1.185 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
-custom_colors/font_color_shadow = Color( 0.745098, 0.239216, 0.239216, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0.431373, 0.0117647, 0.560784, 1 )
 custom_fonts/font = SubResource( 2 )
-text = "Gravity Evade tells the story of the challenges faced by Neutron, a programmed robot with a passion for physics, who is trapped in an enigmatic base controlled by an unknown force that uses gravitational anomalies to hold prisoners. For years, he studies the laws of gravity, looking for a way to escape. By mastering the principles of relativity and quantum theory, Neutron formulates a unifying equation. With this equation, he creates a temporary singularity, distorting space and revealing a dimensional rift. This portal could be his way out of the base."
+text = "Gravity Evade tells the story of Neutron, a robot programmed with a passion for physics. On a space exploration mission, he is absorbed by a black hole, facing unprecedented gravitational challenges. He spends years studying the laws of gravity, looking for a way to escape. Mastering the principles of relativity and quantum theory, Neutron formulates a unifying equation. With this equation, he creates a temporary singularity, distorting space and revealing a dimensional rift. This portal could be your chance to escape the base.
+
+
+"
 autowrap = true
 
 [node name="Button" type="Button" parent="."]

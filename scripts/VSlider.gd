@@ -3,6 +3,7 @@ extends VSlider
 onready var powerTimer : Timer = $"../PowerTimer"
 onready var cooldownTimer : Timer = $"../CooldownTimer"
 onready var timeSlow : Button = $"../TimeSlow"
+var  tween : Tween
 
 func _process(delta: float) -> void:
 	if Global.esploraConnect and Global.controlSlide:
@@ -15,6 +16,7 @@ func _process(delta: float) -> void:
 func _on_TimeSlow_pressed():
 	Engine.time_scale = 0.4
 	powerTimer.start()
+	
 	
 func _on_PowerTimer_timeout():
 	cooldownTimer.start()
