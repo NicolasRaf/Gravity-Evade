@@ -136,7 +136,6 @@ position = Vector2( 52, 427 )
 rotation = 1.5708
 scale = Vector2( 0.3, 0.3 )
 frames = SubResource( 11 )
-frame = 1
 playing = true
 
 [node name="TextureProgress" type="TextureProgress" parent="."]

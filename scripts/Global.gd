@@ -25,7 +25,6 @@ var scenes_database: Dictionary = {
 }
 
 func _process(delta):
-	print("Pause: ", EsploraInput.pauseButton)
 	
 	if EsploraInput.analogY > 155 or EsploraInput.analogY < 150 and esploraConnect:
 		analogicInput()
@@ -47,7 +46,7 @@ func _process(delta):
 
 	if EsploraInput.powerButton == 0 and esploraConnect:
 		var event = InputEventAction.new()
-		event.action = "interact"
+		event.action = "interact"	
 		event.pressed = true
 		get_tree().input_event(event)
 
