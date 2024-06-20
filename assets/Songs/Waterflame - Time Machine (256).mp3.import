@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Waterflame - Time Machine (256).mp3-e88a589ba55f712c729fec4d0ef73de3.mp3str"
+
+[deps]
+
+source_file="res://assets/Songs/Waterflame - Time Machine (256).mp3"
+dest_files=[ "res://.import/Waterflame - Time Machine (256).mp3-e88a589ba55f712c729fec4d0ef73de3.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

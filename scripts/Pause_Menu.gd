@@ -3,13 +3,14 @@ extends CanvasLayer
 onready var ContinueBtn : Button = $ContinueBtn
 
 func _ready():
+	ContinueBtn.grab_focus()
 	visible = false
 	
 func _unhandled_input(event):
 	if event.is_action_pressed("ui_cancel"):
 		visible = true
 		get_tree().paused = true
-		ContinueBtn.grab_focus()
+		
 
 
 func _on_ContinueBtn_pressed():
