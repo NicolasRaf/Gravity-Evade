@@ -1,4 +1,5 @@
 extends Node2D
+#TODO: Cena nescessitando integração ao teleporte e melhoria no visual
 
 func _ready():
 	$Timer.start()  # Certifique-se de que há um Timer na cena com sinal conectado ao método _on_timer_timeout
