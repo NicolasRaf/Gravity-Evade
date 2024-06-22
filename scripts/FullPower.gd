@@ -13,7 +13,8 @@ func _process(delta) -> void:
 		visible = false
 	else:
 		visible = true
-		
+	
+	# Controla a rotação do label com base na sua inclinação 
 	if rect_rotation == 5:
 		tween.interpolate_property(self, "rect_rotation", 5, -5, 0.5, Tween.TRANS_SINE, Tween.EASE_IN_OUT)
 		tween.start()

@@ -12,7 +12,7 @@ var pauseButton: float = 0.0
 var sliderValue: int = 0
 var serialMessage = "" # Mensagem enviada pelo Esplora que contém os valores dos sensores.
 
-var port = ""
+var port = "" # Porta que será utilizada na comunicação com o Esplora
 var baudRate = 9600
 var message_to_send
 
@@ -51,17 +51,19 @@ func unpackMessage(message) -> void:
 		var sensorValue : Array = tag.split(":")
 		match sensorValue[0]:
 			"sl":
-				sliderValue = int(sensorValue[1])
+				sliderValue = int(sensorValue[1]) # Definindo o valor da variável do slider ao valor recebido do Esplora
 			"bPo":
 				powerButton = float(sensorValue[1])
 			"bPa":
 				pauseButton = float(sensorValue[1])
 			"bIn":
 				interactButton = float(sensorValue[1])
+			# b"x" define os valores dos botão selecionados com base no Esplora
 			"anY":
 				analogY = float(sensorValue[1])
 			"anB":
 				analogButton = float(sensorValue[1])
+			# an"x" define os valores do analogico selecionados com base no Esplora
 			_:
 				pass
 

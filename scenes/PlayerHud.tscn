@@ -1,7 +1,7 @@
 [gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://scripts/PowerBar.gd" type="Script" id=1]
-[ext_resource path="res://scripts/Label.gd" type="Script" id=2]
+[ext_resource path="res://scripts/FragmentsCount.gd" type="Script" id=2]
 [ext_resource path="res://scripts/VSlider.gd" type="Script" id=3]
 [ext_resource path="res://scenes/Fragment.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/Fonts/a_space/A-Space Bold Demo.otf" type="DynamicFontData" id=5]
